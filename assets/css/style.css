@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Khand:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --var-color-light-shades: #f4f7f4;
+    --var-color-dark-shades: #232129;
+    --var-color-main-brand: #87017c;
+    --var-color-light-accent: #9f8c9a;
+    --var-color-dark-accent: #7f6e90;
+    --var-font-primary: 'Poppins', sans-serif;
+    --var-font-headers: 'Montserrat', sans-serif;
+    --var-font-big-headers: 'Khand', sans-serif;
+}
+/* Main classes */
+body {
+    background-color: var(--var-color-light-shades);
+    color: var(--var-color-dark-shades);
+    /* Font-size 10px is better for future count with rem and em 1rem = 10px */
+    font-size: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: var(--var-font-big-headers);
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--var-font-headers);
+}
+
+p {
+    font-family: --var-font-primary
+}
+
+.container {
+    width: 1080px;
+    margin: 0 auto;
+}
+
+.justify-space-between {
+    justify-content: space-between;
+}
+
+.display-flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Specific classes */
+
+/* Sections */
+
+.section {
+height: 100vh;
+} 
+
+.section-1 {
+    background-image: url("/assets/images/backgound/background-01.svg");
+    background-color: var(--var-color-dark-shades);
+    color: var(--var-color-light-shades);
+    height: 1000px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    
+
+}
+
+/* Header and navbar */
+header {
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+nav {
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.nav-link {
+    display: flex;
+    justify-content: center;
+}
+
+.nav-link ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link li {
+    margin: 0 10px;
+}
+
+.nav-link a { 
+    text-decoration: none;
+    color: var(--var-color-dark-shades);
+    font-family: var(--var-font-headers);
+    font-size: 1rem;
+}
+
+.download-btn button {
+    font-family: var(--var-font-primary);
+    font-size: 1rem;
+    
+    background-color: var(--var-color-dark-shades);
+    border-radius: .5rem;
+}
+
+.download-btn button a {
+    text-decoration: none;
+    color: var(--var-color-light-shades);
+}
+
+/* Home section */
+.home {
+    text-align: left;
+}
+
+.home h1 {
+    font-size: 7rem;
+    margin: 0 0 0 2rem;
+    padding: 0;
+    position: relative;
+}
+
+.home .fa-circle {
+    font-size: 1.8rem;
+    color: var(--var-color-main-brand);
+    margin: 0.5rem;
+}
+
+.span-container {
+    display: inline-block;
+    position: relative;
+    width: 230px;
+    text-align: center;
+}
+
+#web, 
+#app, 
+#game {
+    padding: 0;
+    margin: 0;
+    right: 0;
+    color: var(--var-color-main-brand);
+
+}
