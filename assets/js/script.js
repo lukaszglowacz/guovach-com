@@ -69,3 +69,20 @@ function writingEffect() {
 
 // Start typing
 writingEffect();
+
+
+// Add loading text to the beginning of the page and activate it when page is not loaded yet
+document.onreadystatechange = function () {
+    const loadingButton = document.getElementById('loadingButton');
+    const overlay = document.getElementById('overlay')
+
+    if (document.readyState === 'loading') {
+        // Show the loading button while page is loading
+        loadingButton.style.display = 'block';
+        overlay.style.display = 'block';
+    } else if (document.readyState === 'complete') {
+        // Hide the loading button when page has laded
+        loadingButton.style.display = 'none';
+        overlay.style.display = 'none';
+    }
+};

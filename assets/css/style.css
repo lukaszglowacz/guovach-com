@@ -73,6 +73,29 @@ p {
 
 /* Specific classes */
 
+/* Loading button and overlay div when loading is on screen */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px);
+    z-index: 999;
+}
+
+.loading-button {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--var-color-dark-shades);
+    color: var(--var-color-light-shades);
+    padding: 1.5rem, 3rem;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    z-index: 1000;
+}
 /* Sections */
 
 .section {
@@ -198,21 +221,22 @@ nav {
 
 /* Home-2 section */
 
-.home-2 h2 {
-    font-size: 10rem;
+.about h2 {
+    font-size: 14rem;
     margin: 0;
     padding: 0;
     text-align: center;
-    line-height: 5rem;
+    line-height: 6rem;
+    letter-spacing: -0.5rem;
 }
 
 .do-container {
     display: inline-block;
     position: relative;
-    font-size: 6rem;
+    font-size: 7rem;
 }
 
-.home-2 .fa-circle {
+.about .fa-circle {
     font-size: 2rem;
     color: var(--var-color-main-brand);
 }
@@ -221,7 +245,7 @@ nav {
     display: inline;
 }
 
-.blinking-cursor {
+.about .blinking-cursor {
     font-size: 6rem;
     vertical-align: center; 
     animation: blink 1s infinite;
@@ -239,3 +263,4 @@ nav {
         opacity: 0;
     }
 }
+
