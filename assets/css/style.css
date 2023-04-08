@@ -162,10 +162,11 @@ nav {
 }
 
 .home h1 {
-    font-size: 7rem;
+    font-size: 8rem;
     margin: 0 0 0 2rem;
     padding: 0;
     position: relative;
+    line-height: 9rem;
 }
 
 .home .fa-circle {
@@ -177,7 +178,7 @@ nav {
 .span-container {
     display: inline-block;
     position: relative;
-    width: 230px;
+    width: 260px;
     text-align: center;
 }
 
