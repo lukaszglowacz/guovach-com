@@ -124,29 +124,38 @@ nav {
 }
 
 .nav-link li {
-    margin: 0 10px;
+    margin: 0;
+    border-right: 1px solid var(--var-color-dark-shades);
+    padding: 0 20px;
+}
+
+.nav-link li:nth-child(5) {
+    border-right: none;
 }
 
 .nav-link a { 
     text-decoration: none;
     color: var(--var-color-dark-shades);
     font-family: var(--var-font-headers);
-    font-size: 1rem;
+    font-size: 1.3rem;
 }
 
 .download-btn button {
-    font-family: var(--var-font-primary);
-    font-size: 1rem;
-    
-    background-color: var(--var-color-dark-shades);
-    border-radius: .5rem;
+    background-color: transparent;
+    border-radius: 50%;
+    border: none;
 }
 
 .download-btn button a {
-    text-decoration: none;
     color: var(--var-color-light-shades);
+    
 }
 
+.download-btn button a .fa-download {
+    font-size: 2rem;
+    color: var(--var-color-main-brand);
+    padding: 0.5rem;
+}
 /* Home section */
 .home {
     text-align: left;
