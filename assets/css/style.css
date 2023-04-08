@@ -90,8 +90,12 @@ height: 100vh;
     display: flex;
     align-items: center;
     /* justify-content: center; */
-    
+}
 
+.section-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Header and navbar */
@@ -190,4 +194,48 @@ nav {
     right: 0;
     color: var(--var-color-main-brand);
 
+}
+
+/* Home-2 section */
+
+.home-2 h2 {
+    font-size: 10rem;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    line-height: 5rem;
+}
+
+.do-container {
+    display: inline-block;
+    position: relative;
+    font-size: 6rem;
+}
+
+.home-2 .fa-circle {
+    font-size: 2rem;
+    color: var(--var-color-main-brand);
+}
+
+#doText {
+    display: inline;
+}
+
+.blinking-cursor {
+    font-size: 6rem;
+    vertical-align: center; 
+    animation: blink 1s infinite;
+    font-weight: 300;
+    display: inline;
+    margin-left: -15px;
+    color: var(--var-color-dark-accent);
+}
+
+@keyframes blink {
+    0%, 49% {
+        opacity: 1;
+    }
+    50%, 100% {
+        opacity: 0;
+    }
 }

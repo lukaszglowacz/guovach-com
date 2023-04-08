@@ -1,9 +1,9 @@
 // Display home section spans web, app and game function 
 
 function displaySpans () {
-    const web = document.getElementById('web');
-    const app = document.getElementById('app');
-    const game = document.getElementById('game');
+    let web = document.getElementById('web');
+    let app = document.getElementById('app');
+    let game = document.getElementById('game');
 
     web.style.display = 'inline';
     app.style.display = 'none';
@@ -26,3 +26,46 @@ function displaySpans () {
 
 // Call the function
 displaySpans();
+
+// Home-2 section writing effect animation with blinking line
+
+const doText = document.getElementById('doText');
+doText.textContent = '';
+const words = ['websites', 'software', 'games'];
+let wordIndex = 0;
+let letterIndex = 0;
+let isBackspacing = false;
+
+function writingEffect() {
+    const currentWord = words[wordIndex];
+    const currentLetter = currentWord[letterIndex];
+
+
+    if (isBackspacing) {
+        doText.textContent = currentWord.slice(0, letterIndex);
+        letterIndex--;
+
+        if (letterIndex < 0) {
+            isBackspacing = false;
+            wordIndex = (wordIndex + 1) % words.length;
+            setTimeout(writingEffect, 500);
+        } else {
+            setTimeout(writingEffect, 100);
+        }
+    } else {
+        if (currentLetter !== undefined) {
+            doText.textContent += currentLetter;
+        }
+        letterIndex++;
+
+        if (letterIndex === currentWord.length) {
+            isBackspacing = true;
+            setTimeout(writingEffect, 1000);
+        } else {
+            setTimeout(writingEffect, 200);
+        }
+    }
+}
+
+// Start typing
+writingEffect();
