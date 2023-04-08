@@ -18,6 +18,8 @@ body {
     font-size: 10px;
     margin: 0;
     padding: 0;
+    height: 100vh;
+    border: none;
 }
 
 h1 {
@@ -123,9 +125,16 @@ height: 100vh;
 
 /* Header and navbar */
 header {
+    background-color: var(--var-color-light-shades);
     height: 80px;
     display: flex;
     align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9000;
+    transition: opacity 0.1s ease-in-out;
 }
 
 nav {
@@ -136,6 +145,11 @@ nav {
     align-items: center;
     justify-content: space-between;
 
+}
+
+.logo img {
+    width: 3.5rem;
+    height: 3.5rem;
 }
 
 .nav-link {

@@ -86,3 +86,21 @@ document.onreadystatechange = function () {
         overlay.style.display = 'none';
     }
 };
+
+// Add navbar opacity on scroll function
+
+// Get the header element
+const header = document.querySelector('header');
+
+// When the user scrolls
+window.addEventListener('scroll', function() {
+    // Get the current scroll position
+    const scrollPosition = window.scrollY;
+
+    // If the scroll position is at the top of the page
+    if (scrollPosition === 0) {
+        header.style.opacity = 1;
+    } else {
+        header.style.opacity = 0.9;
+    }
+});
