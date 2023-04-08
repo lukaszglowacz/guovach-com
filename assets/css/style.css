@@ -108,7 +108,6 @@ height: 100vh;
     background-image: url("/assets/images/backgound/background-01.svg");
     background-color: var(--var-color-dark-shades);
     color: var(--var-color-light-shades);
-    height: 1000px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -121,6 +120,16 @@ height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.section-3 {
+    position: relative;
+    overflow: hidden;
+}
+
+.section-4 {
+    position: relative;
+    overflow: hidden;
 }
 
 /* Header and navbar */
@@ -253,6 +262,7 @@ nav {
 .about .fa-circle {
     font-size: 2rem;
     color: var(--var-color-main-brand);
+    margin-left: 0.1rem;
 }
 
 #doText {
@@ -260,12 +270,12 @@ nav {
 }
 
 .about .blinking-cursor {
-    font-size: 6rem;
+    font-size: 7rem;
     vertical-align: center; 
     animation: blink 1s infinite;
     font-weight: 300;
     display: inline;
-    margin-left: -15px;
+    margin-left: -11px;
     color: var(--var-color-dark-accent);
 }
 
@@ -278,3 +288,36 @@ nav {
     }
 }
 
+/* Video section */
+
+.section-3 .video {
+    position: absolute;
+    bottom: 15%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.section-3 video {
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+}
+
+/* Photo-slideshow section */
+
+.section-4 .video {
+    position: absolute;
+    bottom: 15%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.section-4 video {
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+}
