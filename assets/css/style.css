@@ -150,6 +150,12 @@ height: 100vh;
     justify-content: center;
 }
 
+.section-7 {
+    display: flex;
+    align-items: top;
+    justify-content: center;
+}
+
 /* Header and navbar */
 header {
     background-color: var(--var-color-light-shades);
@@ -385,9 +391,40 @@ nav {
     color: var(--var-color-main-brand);
 }
 
-/* Technologu section */
+/* Technology section */
 
 #technologyText {
     display: inline;
     font-weight: 300;
+}
+
+/* Technology skills section */
+
+.skill-container .categories {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5rem;
+}
+
+.categories .btn-category {
+    margin: 0 1rem 0rem 1rem;
+    font-family: var(--var-font-headers);
+    border: none;
+    background-color: transparent;
+    color: var(--var-color-dark-shades);
+    font-size: 1rem;
+    
+}
+
+.skill-container .images {
+    padding: 0 6rem 0 6rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.skill-container .images > * {
+    margin: 1rem;
 }

@@ -113,3 +113,32 @@ function writingEffect(element, words) {
   
     type();
   }
+
+//   Skillset section and show category function
+const btnsCategory = document.querySelectorAll('.btn-category');
+const images = document.querySelectorAll('.images img');
+
+// show all images by default
+images.forEach(img => {
+    img.style.display = 'inline-block';
+  });
+  
+// Add event listener to each button
+btnsCategory.forEach(btn => {
+    btn.addEventListener('click', () => {
+        // get category
+        const category = btn.getAttribute('data-category');
+
+        // show images that match the category or show all images
+        images.forEach(img => {
+            if (category === 'all' || img.getAttribute('data-category').includes(category)) {
+                img.style.display = 'inline-block';
+            } else {
+                img.style.display = 'none';
+            }
+        });
+    });
+});
+
+// simulate a click on the "All" button to show all images by default
+document.querySelector('.btn-category[data-category="all"]').click();
