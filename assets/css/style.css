@@ -35,7 +35,13 @@ h6 {
 }
 
 p {
-    font-family: --var-font-primary
+    font-family: var(--var-font-primary);
+    font-size: 1.7rem;
+    line-height: 2.5rem;
+    letter-spacing: 1.5;
+    font-weight: 200;
+    padding: 0 1rem 0 1rem;
+    margin: 0;
 }
 
 .container {
@@ -128,8 +134,20 @@ height: 100vh;
 }
 
 .section-4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-5 {
     position: relative;
     overflow: hidden;
+}
+
+.section-6 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Header and navbar */
@@ -243,7 +261,6 @@ nav {
 }
 
 /* Home-2 section */
-
 .about h2 {
     font-size: 14rem;
     margin: 0;
@@ -307,7 +324,7 @@ nav {
 
 /* Photo-slideshow section */
 
-.section-4 .video {
+.section-5 .video {
     position: absolute;
     bottom: 15%;
     left: 0;
@@ -316,8 +333,61 @@ nav {
     z-index: -1;
 }
 
-.section-4 video {
+.section-5 video {
     min-width: 100%;
     min-height: 100%;
     object-fit: cover;
+}
+
+/* Describe section */
+.describe-myself h2{
+    font-size: 9rem;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    line-height: 4.8rem;
+    letter-spacing: -0.2rem;
+}
+
+.creation-container {
+    display: inline-block;
+    position: relative;
+    font-size: 3.4rem;
+}
+
+.describe-myself .fa-circle {
+    font-size: 1rem;
+    color: var(--var-color-main-brand);
+    margin-left: -0.3rem
+}
+
+#creationText {
+    display: inline;
+    font-weight: 300;
+}
+
+.describe-myself .blinking-cursor {
+    font-size: 4rem;
+    vertical-align: center; 
+    animation: blink 1s infinite;
+    font-weight: 100;
+    display: inline;
+    margin-left: -20px;
+    color: var(--var-color-dark-accent);
+}
+
+.describe-myself p {
+    margin-top: 4rem;
+    
+}
+
+.describe-myself p span {
+    color: var(--var-color-main-brand);
+}
+
+/* Technologu section */
+
+#technologyText {
+    display: inline;
+    font-weight: 300;
 }

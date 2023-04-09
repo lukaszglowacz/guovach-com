@@ -27,50 +27,6 @@ function displaySpans () {
 // Call the function
 displaySpans();
 
-// Home-2 section writing effect animation with blinking line
-
-const doText = document.getElementById('doText');
-doText.textContent = '';
-const words = ['websites', 'software', 'games'];
-let wordIndex = 0;
-let letterIndex = 0;
-let isBackspacing = false;
-
-function writingEffect() {
-    const currentWord = words[wordIndex];
-    const currentLetter = currentWord[letterIndex];
-
-
-    if (isBackspacing) {
-        doText.textContent = currentWord.slice(0, letterIndex);
-        letterIndex--;
-
-        if (letterIndex < 0) {
-            isBackspacing = false;
-            wordIndex = (wordIndex + 1) % words.length;
-            setTimeout(writingEffect, 500);
-        } else {
-            setTimeout(writingEffect, 100);
-        }
-    } else {
-        if (currentLetter !== undefined) {
-            doText.textContent += currentLetter;
-        }
-        letterIndex++;
-
-        if (letterIndex === currentWord.length) {
-            isBackspacing = true;
-            setTimeout(writingEffect, 1000);
-        } else {
-            setTimeout(writingEffect, 200);
-        }
-    }
-}
-
-// Start typing
-writingEffect();
-
-
 // Add loading text to the beginning of the page and activate it when page is not loaded yet
 document.onreadystatechange = function () {
     const loadingButton = document.getElementById('loadingButton');
@@ -104,3 +60,56 @@ window.addEventListener('scroll', function() {
         header.style.opacity = 0.9;
     }
 });
+
+// Writing effect animation with blinking line
+const doText = document.getElementById('doText');
+const doWords = ['websites', 'software', 'games'];
+writingEffect(doText, doWords);
+
+const creationText = document.getElementById('creationText');
+const creationWords = ['is Limitless: Unlocking Your Imagination',
+    'is Power: Expressing Your Inner Vision', 'is Freedom: Embracing Your Artistic Spirit'];
+writingEffect(creationText, creationWords);
+
+const technologyText = document.getElementById('technologyText');
+const technologyWords = ['helps unleash the potential of creativity', 
+    'simplifies life', 'is constantly changing'];
+writingEffect(technologyText, technologyWords);
+
+function writingEffect(element, words) {
+    let wordIndex = 0;
+    let letterIndex = 0;
+    let isBackspacing = false;
+  
+    function type() {
+      const currentWord = words[wordIndex];
+      const currentLetter = currentWord[letterIndex];
+  
+      if (isBackspacing) {
+        element.textContent = currentWord.slice(0, letterIndex);
+        letterIndex--;
+  
+        if (letterIndex < 0) {
+          isBackspacing = false;
+          wordIndex = (wordIndex + 1) % words.length;
+          setTimeout(type, 500);
+        } else {
+          setTimeout(type, 100);
+        }
+      } else {
+        if (currentLetter !== undefined) {
+          element.textContent += currentLetter;
+        }
+        letterIndex++;
+  
+        if (letterIndex === currentWord.length) {
+          isBackspacing = true;
+          setTimeout(type, 1000);
+        } else {
+          setTimeout(type, 200);
+        }
+      }
+    }
+  
+    type();
+  }
