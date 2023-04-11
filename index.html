@@ -24,8 +24,8 @@
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#projects">Projects</a></li>
-                    <li><a href="#reputation">Reputation</a></li>
-                    <li><a href="contact">Contact</a></li>
+                    <!-- <li><a href="#reputation">Reputation</a></li> -->
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
             <div class="download-btn">
@@ -163,7 +163,7 @@
 
         </section>
 
-        <section class="section section-8">
+        <section class="section section-8" id="projects">
             <div class="container describe-myself">
                 <h2>Projects<br>
                     <span class="creation-container">
@@ -269,15 +269,60 @@
             </div>
         </section>
 
-        <section class="section section-10">
-            <div class="container references">
+        <section class="section section-10" id="contact">
+            <div class="container contact">
+                <h3>Feel free to ask me anything <i class="fa-solid fa-feather"></i></h3>
+                <form>
+                    <div class="form-group">
+                      <label for="firstName">First Name</label>
+                      <input type="text" class="form-control" id="firstName" placeholder="Enter your first name" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="lastName">Last Name</label>
+                      <input type="text" class="form-control" id="lastName" placeholder="Enter your last name" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="email">Email address</label>
+                      <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter your email" required>
+                      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+                    <div class="form-group">
+                      <label for="message">Message</label>
+                      <textarea class="form-control" id="message" rows="5" placeholder="Enter your message"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </form>
             </div>
         </section>
 
     </main>
     <footer>
-
-    </footer>
+        <div class="container footer">
+          <div class="row">
+            <div class="col-md-6">
+              <h3>Quick Links</h3>
+              <ul class="list-unstyled">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Creation</a></li>
+                <li><a href="#">Technology</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <h3>Find me here</h3>
+              <ul class="list-inline social-media-icons">
+                <li class="list-inline-item"><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li class="list-inline-item"><a href="#"><i class="fa-brands fa-github"></i></a></li>
+                <li class="list-inline-item"><a href="#"><i class="fa-brands fa-flickr"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
     <script src="assets/js/script.js"></script>
 </body>
 
