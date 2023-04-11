@@ -147,3 +147,29 @@ btnsCategory.forEach(btn => {
 
 // simulate a click on the "All" button to show all images by default
 document.querySelector('.btn-category[data-category="all"]').click();
+
+// Project category slider
+
+const categories = document.querySelectorAll('.projects-btn-category');
+const projects = document.querySelectorAll('.project');
+
+categories.forEach(category => {
+    category.addEventListener('click', () => {
+        // remove active class from all categories
+        categories.forEach(cat => cat.classList.remove('active'));
+        // add active class to clicked category
+        category.classList.add('active');
+        
+        const categoryValue = category.getAttribute('data-category');
+        
+        projects.forEach(project => {
+            const projectCategory = project.getAttribute('data-category');
+            
+            if (categoryValue === 'all' || categoryValue === projectCategory) {
+                project.style.display = 'block';
+            } else {
+                project.style.display = 'none';
+            }
+        });
+    });
+});
