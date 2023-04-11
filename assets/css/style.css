@@ -156,6 +156,12 @@ height: 100vh;
     justify-content: center;
 }
 
+.section-8 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 /* Header and navbar */
 header {
     background-color: var(--var-color-light-shades);
@@ -348,7 +354,7 @@ nav {
 /* Describe section */
 .describe-myself h2{
     font-size: 9rem;
-    margin: 0;
+    margin: 0 0 3rem 0;
     padding: 0;
     text-align: center;
     line-height: 4.8rem;
@@ -383,8 +389,7 @@ nav {
 }
 
 .describe-myself p {
-    margin-top: 4rem;
-    
+    margin-top: 1rem;
 }
 
 .describe-myself p span {
@@ -414,7 +419,11 @@ nav {
     background-color: transparent;
     color: var(--var-color-dark-shades);
     font-size: 1rem;
+    border: 1px solid var(--var-color-light-accent)
     
+}
+.categories .btn-category:nth-child(1) {
+    font-weight: 600;
 }
 
 .skill-container .images {
@@ -427,4 +436,10 @@ nav {
 
 .skill-container .images > * {
     margin: 1rem;
+}
+
+/* Projects section */
+#projectsText {
+    display: inline;
+    font-weight: 300;
 }

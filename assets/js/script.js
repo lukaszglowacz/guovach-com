@@ -76,6 +76,11 @@ const technologyWords = ['helps unleash the potential of creativity',
     'simplifies life', 'is constantly changing'];
 writingEffect(technologyText, technologyWords);
 
+const projectsText = document.getElementById('projectsText');
+const projectsWords = ["are a programmer's business card", 
+"reflect a programmer's expertise", 'require documentation'];
+writingEffect(projectsText, projectsWords);
+
 function writingEffect(element, words) {
     let wordIndex = 0;
     let letterIndex = 0;
