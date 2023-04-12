@@ -276,6 +276,10 @@ nav {
     font-size: 0.9rem;
 }
 
+.nav-item.active {
+    font-weight: bold;
+  }
+
 .download-btn button {
     background-color: transparent;
     border-radius: 50%;
@@ -482,9 +486,6 @@ nav {
     cursor: pointer;
     
 }
-.categories .btn-category:nth-child(1) {
-    font-weight: 600;
-}
 
 .skill-container .images {
     padding: 0 6rem 0 6rem;
@@ -523,10 +524,6 @@ nav {
     cursor: pointer;
 }
 
-.projects .projects-btn-category:nth-child(1) {
-    font-weight: 600;
-}
-
 .projects-container {
     display: flex;
     flex-wrap: wrap;
@@ -547,9 +544,10 @@ nav {
 }
 
 .project h3 {
-    font-size: 2rem;
+    font-size: 1.7rem;
     margin-bottom: 1rem;
     text-align: center;
+    font-weight: 400;
 }
 
 .project p {
@@ -561,7 +559,6 @@ nav {
     justify-content: center;
     flex-direction: column;
     text-align: center;
-    
     padding: 0 2rem;
 }
 
@@ -571,10 +568,21 @@ nav {
     border-radius: 0.5rem;
     font-size: 1.2rem;
     font-family: var(--var-font-headers);
-    text-decoration: none;
-    color: var(--var-color-dark-shades);
+    text-decoration: none; 
+    color: var(--var-color-light-shades);
+    background-color: var(--var-color-dark-shades);
     cursor: pointer;
     margin-bottom: 0.5rem;
+    transition: transform 0.2s ease-in-out;
+}
+
+.project .links a:hover {
+    transform: translateY(-0.25rem);
+}
+
+.project .links a:nth-child(1) {
+    color: var(--var-color-light-shades);
+    background-color: var(--var-color-main-brand);
 }
 
 .project .technology {
@@ -655,13 +663,12 @@ form {
     font-family: var(--var-font-headers);
     font-size: 1.2rem;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: transform 0.2s ease-in-out;
     
   }
   
   button[type="submit"]:hover {
-    background-color: var(--var-color-dark-shades);
-    color: var(--var-color-light-shades);
+    transform: translateY(-0.25rem);
   }
 
   /* Footer section */
