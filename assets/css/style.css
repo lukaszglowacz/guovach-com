@@ -49,36 +49,6 @@ p {
     margin: 0 auto;
 }
 
-.justify-space-between {
-    justify-content: space-between;
-}
-
-.display-flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.flex-column {
-    flex-direction: column;
-}
-
-.flex-row {
-    flex-direction: row;
-}
-
-.float-left {
-    float: left;
-}
-
-.float-right {
-    float: right;
-}
-
-.text-center {
-    text-align: center;
-}
-
 /* Specific classes */
 
 /* Loading button and overlay div when loading is on screen */
@@ -137,8 +107,6 @@ p {
     font-size: 0.9rem;
   }
 
-
-
 .loading-button {
     position: fixed;
     top: 50%;
@@ -161,7 +129,7 @@ height: 100vh;
     background-image: url("/assets/images/backgound/background-01.svg");
     background-color: var(--var-color-dark-shades);
     color: var(--var-color-light-shades);
-    background-position: center;
+    background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -243,7 +211,6 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-
 }
 
 .logo img {
@@ -484,7 +451,6 @@ nav {
     font-size: 1rem;
     border: 1px solid var(--var-color-light-accent);
     cursor: pointer;
-    
 }
 
 .skill-container .images {
@@ -764,3 +730,212 @@ footer {
     font-size: 2rem;
     line-height: 36px;
   }
+
+  /* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+  
+    /* CSS */
+    
+  }
+  
+  /* 
+    ##Device = Laptops, Desktops
+    ##Screen = B/w 1025px to 1280px
+  */
+  
+  @media (min-width: 1025px) and (max-width: 1280px) {
+    
+    /* CSS */
+    
+  }
+  
+  /* 
+    ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px
+  */
+  
+  @media (min-width: 768px) and (max-width: 1024px) {
+    
+    /* CSS */
+    
+  }
+  
+  /* 
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+  */
+  
+  @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    
+    /* CSS */
+    
+  }
+  
+  /* 
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+  */
+  
+  @media (min-width: 481px) and (max-width: 767px) {
+    
+    /* CSS */
+    
+  }
+  
+  /* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+  
+  @media (min-width: 320px) and (max-width: 480px) {
+    
+    h1 {
+        font-size: 1rem
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+    
+    h3 {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: 0.6rem;
+        line-height: 1rem;
+        letter-spacing: 0.5;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .thank-you-message .fa-square-xmark {
+        font-size: 0.7rem;
+    }
+
+    .thank-you-message p {
+        font-size: 1rem;
+        font-weight: 300;
+        line-height: 1.4rem;
+        padding: 1rem;
+    }
+
+    .thank-you-message p .fa-circle {
+        font-size: 0.3rem;
+    }
+
+    header {
+        height: 1.5rem;
+        width: 320px;
+    }
+
+    nav {
+        justify-content: center;
+        border: 1px solid red;
+    }
+
+    .logo img {
+        width: 1rem;
+        height: 1rem;
+    }
+    
+    .nav-link {
+        display: none;
+    }
+
+    .download-btn button a .fa-download {
+        font-size: 1rem;
+        padding: 0;
+    }
+
+    .home h1 {
+        font-size: 1rem;
+        margin: 0 0 0 1rem;
+        line-height: 1rem;
+    }
+
+    .home .fa-circle {
+        font-size: 0.3rem;
+        margin: 0.1rem;
+    }
+
+    .span-container {
+        width: 26px;
+    }
+    
+    .about h2 {
+        font-size: 1rem;
+        line-height: 1rem;
+        letter-spacing: -0.1rem;
+    }
+
+    .do-container {
+        font-size: 1rem;
+    }
+
+    .about .fa-circle {
+        font-size: 0.3rem;
+    }
+
+    .about .blinking-cursor {
+        font-size: 1rem;
+        margin-left: 0px;
+    }
+
+    .describe-myself h2{
+        font-size: 1rem;
+        margin: 0 0 1rem 0;
+        line-height: 1rem;
+        letter-spacing: -0.1rem;
+    }
+
+    .creation-container {
+        font-size: 1rem;
+    }
+
+    .describe-myself .fa-circle {
+        font-size: 0.3rem;
+        margin-left: -0.1rem
+    }
+
+    .describe-myself .blinking-cursor {
+        font-size: 1rem;
+        margin-left: 0px;
+    }
+
+    .describe-myself p {
+        margin-top: 0.7rem;
+    }
+
+    .skill-container .categories {
+        margin-bottom: 1rem;
+    }
+
+    .categories .btn-category {
+        margin: 0 0.2rem 0rem 0.2rem;
+        font-size: 0.7rem;
+    }
+
+    .skill-container .images {
+        padding: 0 1rem;
+    }
+
+    .skill-container .images > * {
+        margin: 0.5rem;
+        width: 3rem;
+    }
+
+
+
+
+
+
+  
+
+}
