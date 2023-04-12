@@ -173,3 +173,43 @@ categories.forEach(category => {
         });
     });
 });
+
+
+// Form element synchronized with Google Sheets document via Google Apps Script
+
+window.addEventListener("load", function() {
+    const form = document.getElementById('form');
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      const data = new FormData(form);
+      const action = e.target.action;
+      fetch(action, {
+        method: 'POST',
+        body: data,
+      })
+      .then(() => {
+        // Clear input fields
+        form.reset();
+        // Display overlay and thank-you-message
+        const overlay = document.querySelector('.overlay');
+        overlay.style.display = 'block';
+
+        const thankYouMessage = document.querySelector('.thank-you-message');
+        thankYouMessage.style.display = 'flex';
+      })
+    });
+  });
+
+//   Close thank you screen after registering form button
+function handleCloseButtonClick() {
+    const loadingButton = document.getElementById('tuMessage');
+    const overlay = document.getElementById('overlay');
+    
+    const closeButton = document.getElementById('close-button');
+    closeButton.addEventListener('click', () => {
+      loadingButton.style.display = 'none';
+      overlay.style.display = 'none';
+    });
+  }
+  
+  handleCloseButtonClick();

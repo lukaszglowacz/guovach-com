@@ -92,6 +92,53 @@ p {
     z-index: 999;
 }
 
+.thank-you-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    width: 50vw;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+  }
+
+  .thank-you-message .fa-square-xmark {
+    font-size: 2.5rem;
+    color: var(--var-color-main-brand);
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  .thank-you-message .fa-square-xmark:hover {
+    transition: transform 0.3s ease-in-out;
+    color: var(--var-color-dark-accent);
+  }
+  
+  .thank-you-message p {
+    text-align: center;
+    font-size: 2.8rem;
+    font-weight: 300;
+    line-height: 4rem;
+    padding: 2rem;
+    
+  }
+  
+  .thank-you-message p .fa-circle {
+    color: var(--var-color-main-brand);
+    font-size: 0.9rem;
+  }
+
+
+
 .loading-button {
     position: fixed;
     top: 50%;
