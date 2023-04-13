@@ -142,7 +142,7 @@ p {
 /* Sections */
 
 .section-1 {
-    background-image: url("/assets/images/backgound/background-01.svg");
+    background-image: url("assets/images/backgound/background-01.svg");
     background-color: var(--var-color-dark-shades);
     color: var(--var-color-light-shades);
     background-position: right;
@@ -828,40 +828,40 @@ ul.social-media-icons li a:hover {
     }
     
     .section-2 {
-        height: 50vh;
+        height: auto;
     }
     
     .section-3 {
-        height: 50vh;
+        height: auto;
     }
     
     .section-4 {
-        height: 100vh;
+        height: auto;
     }
     
     .section-5 {
-        height: 50vh;
+        height: auto;
     }
     
     .section-6 {
-        height: 100vh;
+        height: auto;
     }
     
     .section-7 {
-        height: 50vh;
+        height: auto;
     }
     
     .section-8 {
-        height: 100vh;
+        height: auto;
         
     }
     
     .section-9 {
-        height: 100vh;
+        height: auto;
     }
     
     .section-10 {
-        height: 100vh;
+        height: auto;
     }
 
     header {
