@@ -11,11 +11,16 @@
     --var-font-big-headers: 'Khand', sans-serif;
 }
 /* Main classes */
+
+* {
+    line-height: 1.5;
+    
+    
+}
+
 body {
     background-color: var(--var-color-light-shades);
     color: var(--var-color-dark-shades);
-    /* Font-size 10px is better for future count with rem and em 1rem = 10px */
-    font-size: 10px;
     margin: 0;
     padding: 0;
     height: 100vh;
@@ -24,28 +29,46 @@ body {
 
 h1 {
     font-family: var(--var-font-big-headers);
+    font-size: 5rem;
+    padding: 0;
+    margin: 0;
+    
 }
 
-h2,
-h3,
-h4,
-h5,
-h6 {
+h2 {
     font-family: var(--var-font-headers);
+    font-size: 5rem;
+    padding: 0;
+    margin: 0;
+    line-height: 0.2;
 }
+
+
+h3 {
+    font-family: var(--var-font-headers);
+    font-size: 2.5rem;
+    padding: 1rem;
+    margin: 0;
+    line-height: 0.2;
+}
+
+h4 {
+    font-family: var(--var-font-headers);
+    font-size: 1.1rem;
+    padding: 0;
+    margin: 0;
+}
+
 
 p {
     font-family: var(--var-font-primary);
-    font-size: 1.4rem;
-    line-height: 2.5rem;
-    letter-spacing: 1.5;
-    font-weight: 200;
-    padding: 0 1rem 0 1rem;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
     margin: 0;
 }
 
 .container {
-    width: 1080px;
+    width: 1000px;
     margin: 0 auto;
 }
 
@@ -78,7 +101,7 @@ p {
   }
 
   .thank-you-message .fa-square-xmark {
-    font-size: 2.5rem;
+    font-size: 1rem;
     color: var(--var-color-main-brand);
     position: absolute;
     top: 0;
@@ -93,18 +116,15 @@ p {
     color: var(--var-color-dark-accent);
   }
   
-  .thank-you-message p {
+  .thank-you-message h2 {
     text-align: center;
-    font-size: 2.8rem;
-    font-weight: 300;
-    line-height: 4rem;
-    padding: 2rem;
+    
     
   }
   
   .thank-you-message p .fa-circle {
     color: var(--var-color-main-brand);
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 
 .loading-button {
@@ -116,7 +136,7 @@ p {
     color: var(--var-color-light-shades);
     padding: 1.5rem, 3rem;
     border-radius: 0.5rem;
-    font-size: 1.5rem;
+    font-size: 1rem;
     z-index: 1000;
 }
 /* Sections */
@@ -129,7 +149,7 @@ height: 100vh;
     background-image: url("/assets/images/backgound/background-01.svg");
     background-color: var(--var-color-dark-shades);
     color: var(--var-color-light-shades);
-    background-position: 50% 50%;
+    background-position: right;
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -192,8 +212,9 @@ height: 100vh;
 
 /* Header and navbar */
 header {
-    background-color: var(--var-color-light-shades);
-    height: 3rem;
+    background-color: var(--var-color-dark-shades);
+    color: var(--var-color-light-shades);
+    height: 48px;
     display: flex;
     align-items: center;
     position: fixed;
@@ -210,12 +231,11 @@ nav {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .logo img {
-    width: 2rem;
-    height: 2rem;
+    width: 1.5rem;
 }
 
 .nav-link {
@@ -233,14 +253,14 @@ nav {
 .nav-link li {
     margin: 0;
     border: none;
-    padding: 0 1.5rem;
+    padding: 0 2rem;
+    font-size: 1rem;
 }
 
 .nav-link a { 
     text-decoration: none;
-    color: var(--var-color-dark-shades);
-    font-family: var(--var-font-headers);
-    font-size: 0.9rem;
+    font-family: var(--var-font-primary);
+    color: var(--var-color-light-shades);
 }
 
 .nav-item.active {
@@ -259,9 +279,9 @@ nav {
 }
 
 .download-btn button a .fa-download {
-    font-size: 1.3rem;
-    color: var(--var-color-main-brand);
-    padding: 0.5rem;
+    font-size: 1rem;
+    color: var(--var-color-light-shades);
+    padding: 0
 }
 /* Home section */
 .home {
@@ -269,24 +289,24 @@ nav {
 }
 
 .home h1 {
-    font-size: 8rem;
     margin: 0 0 0 2rem;
     padding: 0;
     position: relative;
-    line-height: 9rem;
 }
 
 .home .fa-circle {
-    font-size: 1.8rem;
+    font-size: 1rem;
     color: var(--var-color-main-brand);
     margin: 0.5rem;
+    vertical-align: baseline;
+
 }
 
 .span-container {
     display: inline-block;
     position: relative;
-    width: 260px;
     text-align: center;
+    width: 165px;
 }
 
 #web, 
@@ -295,46 +315,38 @@ nav {
     padding: 0;
     margin: 0;
     right: 0;
-    color: var(--var-color-main-brand);
-    font-weight: 400;
-
+    font-size: 5rem;
 }
 
 /* Home-2 section */
 .about h2 {
-    font-size: 12rem;
     margin: 0;
     padding: 0;
     text-align: center;
-    line-height: 6rem;
-    letter-spacing: -0.5rem;
-    font-weight: 600;
 }
 
 .do-container {
     display: inline-block;
     position: relative;
-    font-size: 7rem;
-    font-weight: 300;
 }
 
 .about .fa-circle {
-    font-size: 2rem;
+    font-size: 1rem;
     color: var(--var-color-main-brand);
-    margin-left: 0.1rem;
 }
 
 #doText {
     display: inline;
+    font-size: 5rem;
 }
 
 .about .blinking-cursor {
     font-size: 7rem;
     vertical-align: center; 
     animation: blink 1s infinite;
-    font-weight: 100;
+    font-weight: 300;
     display: inline;
-    margin-left: -12px;
+    margin-left: -15px;
     color: var(--var-color-dark-shades);
 }
 
@@ -350,76 +362,56 @@ nav {
 /* Video section */
 
 .section-3 .video {
-    position: absolute;
-    bottom: 15%;
-    left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
 }
 
-.section-3 video {
-    min-width: 100%;
-    min-height: 100%;
+video {
+    width: 100%;
+    height: auto;
     object-fit: cover;
+    object-position: center bottom;
 }
 
 /* Photo-slideshow section */
 
-.section-5 .video {
-    position: absolute;
-    bottom: 15%;
-    left: 0;
+.section-5 .video{
     width: 100%;
     height: 100%;
-    z-index: -1;
-}
-
-.section-5 video {
-    min-width: 100%;
-    min-height: 100%;
-    object-fit: cover;
 }
 
 /* Describe section */
 .describe-myself h2{
-    font-size: 7rem;
-    margin: 0 0 3rem 0;
+    margin: 0 0 5rem 0;
     padding: 0;
     text-align: center;
-    line-height: 4.8rem;
-    letter-spacing: -0.2rem;
 }
 
 .creation-container {
     display: inline-block;
     position: relative;
-    font-size: 3.4rem;
 }
 
 .describe-myself .fa-circle {
-    font-size: 1rem;
+    font-size: 0.8rem;
     color: var(--var-color-main-brand);
-    margin-left: -0.3rem
+    margin-left: -10px;
+    padding: 0;
 }
 
 #creationText {
     display: inline;
+    font-size: 2.5rem;
     font-weight: 300;
 }
 
 .describe-myself .blinking-cursor {
-    font-size: 4rem;
+    font-size: 3.5rem;
     vertical-align: center; 
     animation: blink 1s infinite;
-    font-weight: 100;
+    font-weight: 300;
     display: inline;
-    margin-left: -20px;
-    color: var(--var-color-dark-accent);
-}
-
-.describe-myself p {
-    margin-top: 1rem;
+    margin-left: -33px;
 }
 
 .describe-myself p span {
@@ -430,6 +422,7 @@ nav {
 
 #technologyText {
     display: inline;
+    font-size: 2.5rem;
     font-weight: 300;
 }
 
@@ -468,6 +461,7 @@ nav {
 /* Projects section */
 #projectsText {
     display: inline;
+    font-size: 2.5rem;
     font-weight: 300;
 }
 
@@ -509,11 +503,20 @@ nav {
     margin-bottom: 1rem;;
 }
 
-.project h3 {
-    font-size: 1.7rem;
+.project h4 {
     margin-bottom: 1rem;
     text-align: center;
-    font-weight: 400;
+}
+
+.project .technology {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    padding: 1rem 1rem 0 1rem;
+}
+
+.project .technology img {
+    width: 3.5rem;
 }
 
 .project p {
@@ -532,7 +535,7 @@ nav {
     padding: 0.5rem 1rem;
     border: 1px solid var(--var-color-dark-shades);
     border-radius: 0.5rem;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-family: var(--var-font-headers);
     text-decoration: none; 
     color: var(--var-color-light-shades);
@@ -551,19 +554,6 @@ nav {
     background-color: var(--var-color-main-brand);
 }
 
-.project .technology {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: left;
-    padding: 1rem 1rem 0 1rem;
-
-}
-
-.project .technology img {
-    width: 3.5rem;
-
-}
-
 /* Contact form */
 /* Style the form container */
 .contact {
@@ -576,8 +566,7 @@ nav {
 
 .contact h3 {
     font-family: var(--var-font-headers);
-    font-size: 3rem;
-    font-weight: 300;
+    margin-bottom: 3rem;
 }
 
 .contact h3 .fa-feather {
@@ -587,18 +576,18 @@ nav {
 form {
     max-width: 60rem;
     margin: 0 auto;
-  }
+}
   
   /* Style the form fields */
-  .form-group {
+.form-group {
     margin-bottom: 1.5rem;
-  }
+}
   
-  label {
-    font-weight: 300;
+label {
     margin-bottom: 0.5rem;
-    font-size: 1.2rem;
-  }
+    font-size: 14px;
+    padding: 0.5rem;
+}
   
   input[type="text"],
   input[type="email"],
@@ -627,7 +616,7 @@ form {
     border: none;
     border-radius: 0.5rem;
     font-family: var(--var-font-headers);
-    font-size: 1.2rem;
+    font-size: 1rem;
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
     
@@ -642,9 +631,9 @@ form {
 footer {
     background-color: var(--var-color-dark-shades);
     color: var(--var-color-light-shades);
-    font-size: 0.9rem;
+    font-size: 1rem;
     align-items: center;
-    width: 100%s
+    width: 100%;
   }
 
 .row {
@@ -662,73 +651,67 @@ footer {
     padding: 0;
     font-family: var(--var-font-primary);
     column-count: 2;
-    
-    
   }
   
   ul.list-unstyled li {
     list-style: none;
-    margin: 0 0.5rem 0 0;
+    margin: 0;
     padding-right: 0.5rem;
     border: none;
     font-weight: 100;
 }
 
 .col-md-6 {
-    margin: 1rem 0
-
+    margin: 2rem;
 }
 
-.col-md-6 h3 {
-    margin: 0 0 1rem 0;
+.col-md-6 h4 {
+    margin-bottom: 1rem;
     font-weight: 300;
 }
 
-  
 
-  ul.list-unstyled li a {
+ul.list-unstyled li a {
     color: var(--var-color-light-shades);
     text-decoration: none;
     transition: color 0.3s ease;
-  }
+}
   
-  ul.list-unstyled li a:hover {
+ul.list-unstyled li a:hover {
     color: var(--var-color-light-accent);
-  }
+}
   
   /* Style the social media column */
-  ul.social-media-icons {
+ul.social-media-icons {
     margin: 0;
     padding: 0;
-  }
+}
   
-  ul.social-media-icons li {
+ul.social-media-icons li {
     display: inline-block;
     margin-right: 2rem;
-  }
+}
   
-  ul.social-media-icons li:last-child {
+ul.social-media-icons li:last-child {
     margin-right: 0;
-  }
+}
   
-  ul.social-media-icons li a {
+ul.social-media-icons li a {
     color: var(--var-color-light-shades);
     transition: color 0.3s ease;
-  }
+}
   
-  ul.social-media-icons li a:hover {
+ul.social-media-icons li a:hover {
     color: var(--var-color-light-accent);
-  }
+}
 
   /* Style the social media icons */
   i.fab {
     font-size: 2rem;
-    line-height: 36px;
   }
   
   i.fa-brands {
     font-size: 2rem;
-    line-height: 36px;
   }
 
   /* 
@@ -793,24 +776,6 @@ footer {
   
   @media (min-width: 320px) and (max-width: 480px) {
     
-    h1 {
-        font-size: 1rem
-    }
-
-    h2 {
-        font-size: 1rem;
-    }
-    
-    h3 {
-        font-size: 1rem;
-    }
-
-    p {
-        font-size: 0.6rem;
-        line-height: 1rem;
-        letter-spacing: 0.5;
-    }
-
     .container {
         width: 100%;
     }
@@ -831,8 +796,7 @@ footer {
     }
 
     header {
-        height: 1.5rem;
-        width: 320px;
+        width: 100%;
     }
 
     nav {
@@ -840,10 +804,6 @@ footer {
         border: 1px solid red;
     }
 
-    .logo img {
-        width: 1rem;
-        height: 1rem;
-    }
     
     .nav-link {
         display: none;
@@ -931,11 +891,105 @@ footer {
         width: 3rem;
     }
 
+    .projects-categories {
+        margin-bottom: 1rem;
+    }
 
+    .projects .projects-btn-category {
+        margin: 0 0.2rem 0rem 0.2rem;
+        font-size: 0.7rem;
+    }
+    
+    .projects-container {
+        justify-content: center;
+    }
 
+    .project {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
 
+    .project h3 {
+        font-size: 1rem;
+    }
 
+    .project .technology {
+        justify-content: center;
+        padding: 1rem 1rem 0 1rem;
+    }
+    
+    .project .technology img {
+        width: 2.5rem;
+    }
 
-  
+    .project p {
+        margin-bottom: 1.3rem;
+    }
+
+    .contact h3 {
+        font-size: 1rem;
+    }
+
+    form {
+        max-width: 60rem;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .form-group {
+        margin: 1rem;
+    }
+
+    label {
+        font-size: 1rem;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        padding: 0.2rem 0.5rem;
+        font-size: 0.9rem;
+        border-radius: 0.5rem;
+        width: 100%;
+        box-sizing: border-box;
+        background-color: transparent;
+        color: var(--var-color-dark-shades);
+        border: 1px solid var(--var-color-light-accent);
+        font-family: var(--var-font-primary);
+        outline: none;
+    }
+
+    textarea {
+        height: 100px;
+    }
+
+    .row {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+
+    .col-md-6 {
+        width: 100%;
+    }
+
+    .col-md-6 h3 {
+        padding: 0 1rem;
+    }
+
+    ul.list-unstyled {
+        margin: 0;
+        padding: 0 1rem;
+        font-family: var(--var-font-primary);
+        column-count: 3;
+        
+    }
+
+    ul.social-media-icons {
+        margin: 0;
+        padding: 0 1rem;
+      }
+    
 
 }
