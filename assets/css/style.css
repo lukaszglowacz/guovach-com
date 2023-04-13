@@ -101,7 +101,7 @@ p {
   }
 
   .thank-you-message .fa-square-xmark {
-    font-size: 1rem;
+    font-size: 2rem;
     color: var(--var-color-main-brand);
     position: absolute;
     top: 0;
@@ -118,6 +118,8 @@ p {
   
   .thank-you-message h2 {
     text-align: center;
+    line-height: 1.5;
+    font-weight: 300;
   }
   
   .thank-you-message p .fa-circle {
@@ -139,10 +141,6 @@ p {
 }
 /* Sections */
 
-.section {
-height: 100vh;
-} 
-
 .section-1 {
     background-image: url("/assets/images/backgound/background-01.svg");
     background-color: var(--var-color-dark-shades);
@@ -153,46 +151,54 @@ height: 100vh;
     display: flex;
     align-items: center;
     /* justify-content: center; */
+    height: 100vh;
 }
 
 .section-2 {
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100vh;
 }
 
 .section-3 {
     position: relative;
     overflow: hidden;
+    height: 100vh;
 }
 
 .section-4 {
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100vh;
 }
 
 .section-5 {
     position: relative;
     overflow: hidden;
+    height: 100vh;
 }
 
 .section-6 {
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100vh;
 }
 
 .section-7 {
     display: flex;
     align-items: top;
     justify-content: center;
+    height: 100vh;
 }
 
 .section-8 {
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100vh;
     
 }
 
@@ -200,12 +206,14 @@ height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100vh;
 }
 
 .section-10 {
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100vh;
 }
 
 /* Header and navbar */
@@ -798,7 +806,6 @@ ul.social-media-icons li a:hover {
         padding: 0.5rem 1rem;
     }
 
-
     .container {
         width: 100%;
     }
@@ -814,6 +821,47 @@ ul.social-media-icons li a:hover {
 
     .thank-you-message h2 .fa-circle {
         font-size: 0.3rem;
+    }
+
+    .section-1 {
+        height: 100vh;
+    }
+    
+    .section-2 {
+        height: 50vh;
+    }
+    
+    .section-3 {
+        height: 50vh;
+    }
+    
+    .section-4 {
+        height: 100vh;
+    }
+    
+    .section-5 {
+        height: 50vh;
+    }
+    
+    .section-6 {
+        height: 100vh;
+    }
+    
+    .section-7 {
+        height: 50vh;
+    }
+    
+    .section-8 {
+        height: 100vh;
+        
+    }
+    
+    .section-9 {
+        height: 100vh;
+    }
+    
+    .section-10 {
+        height: 100vh;
     }
 
     header {
