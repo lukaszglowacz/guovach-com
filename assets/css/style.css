@@ -40,21 +40,21 @@ h2 {
     font-size: 5rem;
     padding: 0;
     margin: 0;
-    line-height: 0.2;
+    line-height: 0;
 }
 
 
 h3 {
     font-family: var(--var-font-headers);
     font-size: 2.5rem;
-    padding: 1rem;
+    padding: 0;
     margin: 0;
-    line-height: 0.2;
+    line-height: 0;
 }
 
 h4 {
     font-family: var(--var-font-headers);
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     padding: 0;
     margin: 0;
 }
@@ -118,8 +118,6 @@ p {
   
   .thank-you-message h2 {
     text-align: center;
-    
-    
   }
   
   .thank-you-message p .fa-circle {
@@ -283,6 +281,7 @@ nav {
     color: var(--var-color-light-shades);
     padding: 0
 }
+
 /* Home section */
 .home {
     text-align: left;
@@ -775,7 +774,31 @@ ul.social-media-icons li a:hover {
   */
   
   @media (min-width: 320px) and (max-width: 480px) {
+    h1 {
+        font-size: 2.3rem;
+        line-height: 1.5;
+    }
     
+    h2 {
+        font-size: 3.4rem;
+    }
+    
+    
+    h3 {
+        font-size: 1.8rem;
+    }
+    
+    h4 {
+        font-size: 1.2rem;
+    }
+    
+    
+    p {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+    }
+
+
     .container {
         width: 100%;
     }
@@ -784,14 +807,12 @@ ul.social-media-icons li a:hover {
         font-size: 0.7rem;
     }
 
-    .thank-you-message p {
-        font-size: 1rem;
+    .thank-you-message h2 {
         font-weight: 300;
-        line-height: 1.4rem;
         padding: 1rem;
     }
 
-    .thank-you-message p .fa-circle {
+    .thank-you-message h2 .fa-circle {
         font-size: 0.3rem;
     }
 
@@ -800,24 +821,27 @@ ul.social-media-icons li a:hover {
     }
 
     nav {
-        justify-content: center;
-        border: 1px solid red;
+        justify-content: space-between;
+        
     }
 
-    
+    .logo img {
+        margin: 0 1rem;
+    }
+
     .nav-link {
         display: none;
     }
 
     .download-btn button a .fa-download {
-        font-size: 1rem;
-        padding: 0;
+        margin: 0 1rem;
     }
 
     .home h1 {
-        font-size: 1rem;
         margin: 0 0 0 1rem;
-        line-height: 1rem;
+        line-height: 3rem;
+        padding: 0 0 1rem 0;
+
     }
 
     .home .fa-circle {
@@ -826,25 +850,26 @@ ul.social-media-icons li a:hover {
     }
 
     .span-container {
-        width: 26px;
-    }
-    
-    .about h2 {
-        font-size: 1rem;
-        line-height: 1rem;
-        letter-spacing: -0.1rem;
+        width: 80px;
     }
 
-    .do-container {
-        font-size: 1rem;
+    #web, 
+    #app, 
+    #game {
+        right: 0;
+        font-size: 2.5rem;
     }
 
     .about .fa-circle {
-        font-size: 0.3rem;
+        font-size: 0.7rem;
+    }
+
+    #doText {
+        font-size: 2.3rem;
     }
 
     .about .blinking-cursor {
-        font-size: 1rem;
+        font-size: 3rem;
         margin-left: 0px;
     }
 
