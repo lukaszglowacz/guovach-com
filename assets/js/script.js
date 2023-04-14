@@ -1,6 +1,6 @@
 // Display home section spans web, app and game function 
 
-function displaySpans () {
+function displaySpans() {
     let web = document.getElementById('web');
     let app = document.getElementById('app');
     let game = document.getElementById('game');
@@ -49,7 +49,7 @@ document.onreadystatechange = function () {
 const header = document.querySelector('header');
 
 // When the user scrolls
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
     // Get the current scroll position
     const scrollPosition = window.scrollY;
 
@@ -72,52 +72,52 @@ const creationWords = ['is unlocking imagination',
 writingEffect(creationText, creationWords);
 
 const technologyText = document.getElementById('technologyText');
-const technologyWords = ['helps unleash the potential of creation', 
+const technologyWords = ['helps unleash the potential of creation',
     'simplifies life', 'is constantly changing'];
 writingEffect(technologyText, technologyWords);
 
 const projectsText = document.getElementById('projectsText');
-const projectsWords = ["are a programmer's business card", 
-"reflect a programmer's expertise", 'require documentation'];
+const projectsWords = ["are a programmer's business card",
+    "reflect a programmer's expertise", 'require documentation'];
 writingEffect(projectsText, projectsWords);
 
 function writingEffect(element, words) {
     let wordIndex = 0;
     let letterIndex = 0;
     let isBackspacing = false;
-  
+
     function type() {
-      const currentWord = words[wordIndex];
-      const currentLetter = currentWord[letterIndex];
-  
-      if (isBackspacing) {
-        element.textContent = currentWord.slice(0, letterIndex);
-        letterIndex--;
-  
-        if (letterIndex < 0) {
-          isBackspacing = false;
-          wordIndex = (wordIndex + 1) % words.length;
-          setTimeout(type, 500);
+        const currentWord = words[wordIndex];
+        const currentLetter = currentWord[letterIndex];
+
+        if (isBackspacing) {
+            element.textContent = currentWord.slice(0, letterIndex);
+            letterIndex--;
+
+            if (letterIndex < 0) {
+                isBackspacing = false;
+                wordIndex = (wordIndex + 1) % words.length;
+                setTimeout(type, 500);
+            } else {
+                setTimeout(type, 100);
+            }
         } else {
-          setTimeout(type, 100);
+            if (currentLetter !== undefined) {
+                element.textContent += currentLetter;
+            }
+            letterIndex++;
+
+            if (letterIndex === currentWord.length) {
+                isBackspacing = true;
+                setTimeout(type, 1000);
+            } else {
+                setTimeout(type, 200);
+            }
         }
-      } else {
-        if (currentLetter !== undefined) {
-          element.textContent += currentLetter;
-        }
-        letterIndex++;
-  
-        if (letterIndex === currentWord.length) {
-          isBackspacing = true;
-          setTimeout(type, 1000);
-        } else {
-          setTimeout(type, 200);
-        }
-      }
     }
-  
+
     type();
-  }
+}
 
 //   Skillset section and show category function
 const btnsCategory = document.querySelectorAll('.btn-category');
@@ -126,8 +126,8 @@ const images = document.querySelectorAll('.images img');
 // show all images by default
 images.forEach(img => {
     img.style.display = 'inline-block';
-  });
-  
+});
+
 // Add event listener to each button
 btnsCategory.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -196,27 +196,27 @@ categories.forEach(category => {
 document.querySelector('.projects-btn-category[data-category="all"]').click();
 
 // Form element synchronized with Google Sheets document via Google Apps Script
-window.addEventListener("load", function() {
+window.addEventListener("load", function () {
     const form = document.getElementById('form');
-    form.addEventListener("submit", function(e) {
-      e.preventDefault();
-      const data = new FormData(form);
-      const action = e.target.action;
-      fetch(action, {
-        method: 'POST',
-        body: data,
-      })
-      .then(() => {
-        // Clear input fields
-        form.reset();
-        // Display overlay and thank-you-message
-        const overlay = document.querySelector('.overlay');
-        overlay.style.display = 'block';
-        const thankYouMessage = document.querySelector('.thank-you-message');
-        thankYouMessage.style.display = 'flex';
-      })
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        const data = new FormData(form);
+        const action = e.target.action;
+        fetch(action, {
+            method: 'POST',
+            body: data,
+        })
+            .then(() => {
+                // Clear input fields
+                form.reset();
+                // Display overlay and thank-you-message
+                const overlay = document.querySelector('.overlay');
+                overlay.style.display = 'block';
+                const thankYouMessage = document.querySelector('.thank-you-message');
+                thankYouMessage.style.display = 'flex';
+            })
     });
-  });
+});
 
 
 
@@ -224,45 +224,45 @@ window.addEventListener("load", function() {
 function handleCloseButtonClick() {
     const loadingButton = document.getElementById('tuMessage');
     const overlay = document.getElementById('overlay');
-    
+
     const closeButton = document.getElementById('close-button');
     closeButton.addEventListener('click', () => {
-      loadingButton.style.display = 'none';
-      overlay.style.display = 'none';
+        loadingButton.style.display = 'none';
+        overlay.style.display = 'none';
     });
-  }
-  
-  handleCloseButtonClick();
+}
+
+handleCloseButtonClick();
 
 //   When user sroll page navbar list become active on section user actually is
 function setActiveNavItem() {
     const navItems = document.querySelectorAll('.nav-item');
     let activeItem = navItems[0]; // Set the first item as the active item
-    
+
     // Listen for the scroll event
     window.addEventListener('scroll', () => {
-      // Get the current scroll position
-      const scrollPos = window.scrollY;
-      
-      // Check each section's position to see which one is currently in view
-      navItems.forEach(item => {
-        const sectionId = item.getAttribute('data-section-id');
-        const section = document.getElementById(sectionId);
-        const sectionPos = section.getBoundingClientRect().top + scrollPos;
-        
-        if (scrollPos >= sectionPos && scrollPos < sectionPos + section.offsetHeight) {
-          // Add the active class to the corresponding navigation item
-          if (item !== activeItem) {
-            activeItem.classList.remove('active');
-            item.classList.add('active');
-            activeItem = item;
-          }
-        }
-      });
+        // Get the current scroll position
+        const scrollPos = window.scrollY;
+
+        // Check each section's position to see which one is currently in view
+        navItems.forEach(item => {
+            const sectionId = item.getAttribute('data-section-id');
+            const section = document.getElementById(sectionId);
+            const sectionPos = section.getBoundingClientRect().top + scrollPos;
+
+            if (scrollPos >= sectionPos && scrollPos < sectionPos + section.offsetHeight) {
+                // Add the active class to the corresponding navigation item
+                if (item !== activeItem) {
+                    activeItem.classList.remove('active');
+                    item.classList.add('active');
+                    activeItem = item;
+                }
+            }
+        });
     });
-  }
-  
-  setActiveNavItem();
+}
+
+setActiveNavItem();
 
 // Change github icon on black project area
 let img = document.getElementById('toChange');
@@ -274,20 +274,24 @@ const exitBtn = document.getElementById('exitBtn');
 const navLinks = document.querySelector('.nav-link');
 
 menuBtn.addEventListener('click', () => {
-  navLinks.classList.add('show');
-  menuBtn.style.display = 'none';
-  exitBtn.style.display = 'flex';
+    navLinks.classList.add('show');
+    menuBtn.style.display = 'none';
+    exitBtn.style.display = 'flex';
+    menuBtn.style.opacity = "0";
+    exitBtn.style.opacity = "1";
 });
 
 exitBtn.addEventListener('click', () => {
-  navLinks.classList.remove('show');
-  navLinks.classList.add('hide');
-  exitBtn.style.display = 'none';
-  menuBtn.style.display = 'flex';
+    navLinks.classList.remove('show');
+    navLinks.classList.add('hide');
+    exitBtn.style.display = 'none';
+    menuBtn.style.display = 'flex';
+    menuBtn.style.opacity = "1";
+    exitBtn.style.opacity = "0";
 });
 
 navLinks.addEventListener('animationend', () => {
-  if (navLinks.classList.contains('hide')) {
-    navLinks.classList.remove('hide');
-  }
+    if (navLinks.classList.contains('hide')) {
+        navLinks.classList.remove('hide');
+    }
 });

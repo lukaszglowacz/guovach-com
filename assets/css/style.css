@@ -872,6 +872,7 @@ ul.social-media-icons li a:hover {
 
     header {
         width: 100%;
+        z-index: 998;
 
     }
 
@@ -886,12 +887,11 @@ ul.social-media-icons li a:hover {
 
     .nav-link {
         display: none;
-        position: absolute;
+        position: fixed;
         top: 48px;
         left: 0;
         width: 100%;
-        background-color: var(--var-color-dark-shades);
-
+        background-color: var(--var-color-dark-shades)
     }
 
     .nav-link ul {
@@ -907,7 +907,7 @@ ul.social-media-icons li a:hover {
     }
       
     .nav-link.show {
-        display: flex;
+        display: block;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -917,12 +917,13 @@ ul.social-media-icons li a:hover {
         width: 100%;
         height: 100%;
         background-color: var(--var-color-dark-shades);
-        z-index: 999;
+        z-index: 997;
         animation: roll-down 0.5s forwards;
-      }
+        animation-fill-mode: forwards;
+    }
       
-      .nav-link.hide {
-        display: flex;
+    .nav-link.hide {
+        display: block;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -932,19 +933,40 @@ ul.social-media-icons li a:hover {
         width: 100%;
         height: 100%;
         background-color: var(--var-color-dark-shades);
-        z-index: 999;
+        z-index: 997;
         animation: roll-up 0.5s forwards;
+        animation-fill-mode: forwards;
     }
       
     @keyframes roll-down {
-        from { transform: translateY(-100%); }
-        to { transform: translateY(0); }
-    }
-      
-    @keyframes roll-up {
-        from { transform: translateY(0); }
-        to { transform: translateY(-100%); }
-    }
+        0% {
+            transform: translateY(-100%);
+            opacity: 0;
+        }
+        50% {
+            transform: translateY(-48px);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        }
+    
+        @keyframes roll-up {
+            0% {
+            transform: translateY(0);
+            opacity: 1;
+            }
+            50% {
+            transform: translateY(-48px);
+            opacity: 0;
+            }
+            100% {
+            transform: translateY(-100%);
+            opacity: 0;
+            }
+        }   
 
     .download-btn button a .fa-download {
         margin: 0;
@@ -964,7 +986,6 @@ ul.social-media-icons li a:hover {
         margin: 0 0 0 1rem;
         line-height: 3rem;
         padding: 0 0 3rem 0;
-
     }
 
     .home .fa-circle {
