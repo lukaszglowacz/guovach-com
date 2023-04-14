@@ -778,17 +778,19 @@ ul.social-media-icons li a:hover {
   
   @media (min-width: 320px) and (max-width: 480px) {
     h1 {
-        font-size: 2.3rem;
-        line-height: 1.5;
+        font-size: 2.6rem;
+        line-height: 0.8
     }
     
     h2 {
-        font-size: 3.4rem;
+        font-size: 2.6rem;
+        line-height: .6;
     }
     
     
     h3 {
         font-size: 1.8rem;
+        line-height: 1.5;
     }
     
     h4 {
@@ -819,35 +821,38 @@ ul.social-media-icons li a:hover {
     }
 
     .section-1 {
-        height: 100vh;
+        height: 70vh;
     }
     
     .section-2 {
-        height: auto;
+        height: 70vh;
     }
     
     .section-3 {
-        height: auto;
+        height: 70vh;
     }
     
     .section-4 {
         height: auto;
+        margin: 3rem 0;
     }
     
     .section-5 {
-        height: auto;
+        height: 70vh;
     }
     
     .section-6 {
         height: auto;
+        margin: 3rem 0;
     }
     
     .section-7 {
-        height: auto;
+        height: 70vh;
     }
     
     .section-8 {
         height: auto;
+        margin: 3rem 0;
         
     }
     
@@ -856,7 +861,7 @@ ul.social-media-icons li a:hover {
     }
     
     .section-10 {
-        height: auto;
+        height: 100vh;
     }
 
     header {
@@ -889,7 +894,7 @@ ul.social-media-icons li a:hover {
     .home h1 {
         margin: 0 0 0 1rem;
         line-height: 3rem;
-        padding: 0 0 1rem 0;
+        padding: 0 0 3rem 0;
 
     }
 
@@ -899,14 +904,14 @@ ul.social-media-icons li a:hover {
     }
 
     .span-container {
-        width: 80px;
+        width: 85px;
     }
 
     #web, 
     #app, 
     #game {
         right: 0;
-        font-size: 2.5rem;
+        font-size: 2.6rem;
     }
 
     .about h2 {
@@ -919,7 +924,7 @@ ul.social-media-icons li a:hover {
     }
 
     #doText {
-        font-size: 2.3rem;
+        font-size: 2.6rem;
     }
 
     .about .blinking-cursor {
@@ -928,10 +933,8 @@ ul.social-media-icons li a:hover {
     }
 
     .describe-myself h2{
-        font-size: 1rem;
         margin: 0 0 1rem 0;
-        line-height: 1rem;
-        letter-spacing: -0.1rem;
+        
     }
 
     .creation-container {
@@ -943,13 +946,21 @@ ul.social-media-icons li a:hover {
         margin-left: -0.1rem
     }
 
-    .describe-myself .blinking-cursor {
+    #creationText {
         font-size: 1rem;
-        margin-left: 0px;
+    }
+
+    .describe-myself .blinking-cursor {
+        font-size: 1.4rem;
+        margin-left: -8px;
     }
 
     .describe-myself p {
         margin-top: 0.7rem;
+    }
+
+    #technologyText {
+        font-size: 1rem;
     }
 
     .skill-container .categories {
@@ -957,37 +968,52 @@ ul.social-media-icons li a:hover {
     }
 
     .categories .btn-category {
-        margin: 0 0.2rem 0rem 0.2rem;
-        font-size: 0.7rem;
+        margin: 0 0.3rem 0rem 0.3rem;
+        font-size: 1rem;
     }
 
     .skill-container .images {
-        padding: 0 1rem;
+        padding: 0 0.5rem;
     }
 
     .skill-container .images > * {
         margin: 0.5rem;
-        width: 3rem;
+        width: 2.5rem;
+    }
+
+    #projectsText {
+        font-size: 1rem;
     }
 
     .projects-categories {
         margin-bottom: 1rem;
+        margin-top: 1rem;
     }
 
     .projects .projects-btn-category {
-        margin: 0 0.2rem 0rem 0.2rem;
-        font-size: 0.7rem;
+        margin: 0 0.3rem 0rem 0.3rem;
+        font-size: 1rem;
     }
     
     .projects-container {
         justify-content: center;
     }
 
+    .projects-container div.project:nth-of-type(even) {
+        background-color: var(--var-color-dark-shades);
+        color: var(--var-color-light-shades);
+    }
+
+    .projects-container div.project:nth-of-type(even) .links a:nth-child(2) {
+        background-color: var(--var-color-light-shades);
+        color: var(--var-color-dark-shades);
+    }
+
     .project {
         width: 100%;
         margin-bottom: 1rem;
     }
-
+  
     .project h3 {
         font-size: 1rem;
     }
@@ -999,6 +1025,7 @@ ul.social-media-icons li a:hover {
     
     .project .technology img {
         width: 2.5rem;
+        margin: 0.5rem;
     }
 
     .project p {
@@ -1006,28 +1033,30 @@ ul.social-media-icons li a:hover {
     }
 
     .contact h3 {
-        font-size: 1rem;
+        text-align:center;
+        margin-bottom: 2rem;
+        margin-top: 2rem;
     }
 
     form {
         max-width: 60rem;
         width: 100%;
-        margin: 0 auto;
+        margin: 0 auto 3rem auto;
     }
 
     .form-group {
-        margin: 1rem;
+        margin: 0.5rem;
     }
 
     label {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 
     input[type="text"],
     input[type="email"],
     textarea {
         padding: 0.2rem 0.5rem;
-        font-size: 0.9rem;
+        font-size: 1rem;
         border-radius: 0.5rem;
         width: 100%;
         box-sizing: border-box;
@@ -1042,9 +1071,26 @@ ul.social-media-icons li a:hover {
         height: 100px;
     }
 
+    button[type="submit"] {
+        background-color: var(--var-color-main-brand);
+        color: var(--var-color-light-shades);
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 0.5rem;
+        font-family: var(--var-font-headers);
+        font-size: 1rem;
+        cursor: pointer;
+        transition: transform 0.2s ease-in-out;
+        margin-left: 0.5rem;
+    }
+      
+    button[type="submit"]:hover {
+        transform: translateY(-0.25rem);
+    }
+
     .row {
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
         
     }
@@ -1053,7 +1099,7 @@ ul.social-media-icons li a:hover {
         width: 100%;
     }
 
-    .col-md-6 h3 {
+    .col-md-6 h4 {
         padding: 0 1rem;
     }
 
@@ -1066,9 +1112,7 @@ ul.social-media-icons li a:hover {
     }
 
     ul.social-media-icons {
-        margin: 0;
+        margin: 0 auto;
         padding: 0 1rem;
       }
-    
-
 }

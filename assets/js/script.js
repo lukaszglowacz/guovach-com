@@ -67,12 +67,12 @@ const doWords = ['websites', 'software', 'games'];
 writingEffect(doText, doWords);
 
 const creationText = document.getElementById('creationText');
-const creationWords = ['is Limitless: Unlocking Your Imagination',
-    'is Power: Expressing Your Inner Vision', 'is Freedom: Embracing Your Artistic Spirit'];
+const creationWords = ['is unlocking imagination',
+    'is expressing inner vision', 'is embracing artistic spirit'];
 writingEffect(creationText, creationWords);
 
 const technologyText = document.getElementById('technologyText');
-const technologyWords = ['helps unleash the potential of creativity', 
+const technologyWords = ['helps unleash the potential of creation', 
     'simplifies life', 'is constantly changing'];
 writingEffect(technologyText, technologyWords);
 
@@ -263,3 +263,7 @@ function setActiveNavItem() {
   }
   
   setActiveNavItem();
+
+// Change github icon on black project area
+let img = document.getElementById('toChange');
+img.setAttribute('src', 'assets/images/skillset/github-white.svg');
