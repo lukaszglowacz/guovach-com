@@ -30,16 +30,12 @@ body {
 h1 {
     font-family: var(--var-font-big-headers);
     font-size: 5rem;
-    padding: 0;
-    margin: 0;
     
 }
 
 h2 {
     font-family: var(--var-font-headers);
     font-size: 5rem;
-    padding: 0;
-    margin: 0;
     line-height: 0;
 }
 
@@ -47,16 +43,12 @@ h2 {
 h3 {
     font-family: var(--var-font-headers);
     font-size: 2.5rem;
-    padding: 0;
-    margin: 0;
     line-height: 0;
 }
 
 h4 {
     font-family: var(--var-font-headers);
     font-size: 1.2rem;
-    padding: 0;
-    margin: 0;
 }
 
 
@@ -142,7 +134,7 @@ p {
 /* Sections */
 
 .section-1 {
-    background-image: url("assets/images/backgound/background-01.svg");
+    background-image: url("/assets/images/backgound/background-01.svg");
     background-color: var(--var-color-dark-shades);
     color: var(--var-color-light-shades);
     background-position: right;
@@ -288,6 +280,10 @@ nav {
     font-size: 1rem;
     color: var(--var-color-light-shades);
     padding: 0
+}
+
+.menu-button {
+    display: none
 }
 
 /* Home section */
@@ -882,7 +878,13 @@ ul.social-media-icons li a:hover {
     }
 
     .download-btn button a .fa-download {
+        margin: 0;
+    }
+
+    .menu-button {
+        display: flex;
         margin: 0 1rem;
+
     }
 
     .home h1 {
@@ -908,8 +910,13 @@ ul.social-media-icons li a:hover {
         font-size: 2.5rem;
     }
 
+    .about h2 {
+        margin-top: 40px;
+    }
+
     .about .fa-circle {
         font-size: 0.7rem;
+        margin: -3px
     }
 
     #doText {
@@ -918,7 +925,7 @@ ul.social-media-icons li a:hover {
 
     .about .blinking-cursor {
         font-size: 3rem;
-        margin-left: 0px;
+        margin-left: -9px;
     }
 
     .describe-myself h2{
