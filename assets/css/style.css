@@ -143,54 +143,54 @@ p {
     display: flex;
     align-items: center;
     /* justify-content: center; */
-    height: 100vh;
+    height: 70vh;
 }
 
 .section-2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 70vh;
 }
 
 .section-3 {
     position: relative;
     overflow: hidden;
-    height: 100vh;
+    height: 70vh;
 }
 
 .section-4 {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 70vh;
 }
 
 .section-5 {
     position: relative;
     overflow: hidden;
-    height: 100vh;
+    height: 70vh;
 }
 
 .section-6 {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 70vh;
 }
 
 .section-7 {
     display: flex;
     align-items: top;
     justify-content: center;
-    height: 100vh;
+    height: 70vh;
 }
 
 .section-8 {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 70h
     
 }
 
@@ -198,14 +198,14 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: auto;
 }
 
 .section-10 {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: auto;
 }
 
 /* Header and navbar */
@@ -364,28 +364,25 @@ nav {
 
 /* Video section */
 
-.section-3 .video {
+.video {
     width: 100%;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    
 }
 
 video {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    object-position: center bottom;
-}
-
-/* Photo-slideshow section */
-
-.section-5 .video{
-    width: 100%;
+    width: auto;
     height: 100%;
+    object-fit: cover;
+    object-position: bottom;
+    border-radius: 1rem;
 }
 
 /* Describe section */
 .describe-myself h2{
-    margin: 0 0 5rem 0;
+    margin: 0 0 3rem 0;
     padding: 0;
     text-align: center;
 }
@@ -459,6 +456,7 @@ video {
 
 .skill-container .images > * {
     margin: 1rem;
+    width: 5rem;
 }
 
 /* Projects section */
@@ -474,6 +472,7 @@ video {
     display: flex;
     justify-content: center;
     margin-bottom: 3rem;
+    margin-top: 5rem;
 }
 
 .projects .projects-btn-category {
@@ -578,7 +577,7 @@ video {
 
 form {
     max-width: 60rem;
-    margin: 0 auto;
+    margin: 0 auto 2rem auto;
 }
   
   /* Style the form fields */
