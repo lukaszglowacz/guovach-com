@@ -267,3 +267,27 @@ function setActiveNavItem() {
 // Change github icon on black project area
 let img = document.getElementById('toChange');
 img.setAttribute('src', 'assets/images/skillset/github-white.svg');
+
+// Menu changer unorded navi list and change icons
+const menuBtn = document.getElementById('menuBtn');
+const exitBtn = document.getElementById('exitBtn');
+const navLinks = document.querySelector('.nav-link');
+
+menuBtn.addEventListener('click', () => {
+  navLinks.classList.add('show');
+  menuBtn.style.display = 'none';
+  exitBtn.style.display = 'flex';
+});
+
+exitBtn.addEventListener('click', () => {
+  navLinks.classList.remove('show');
+  navLinks.classList.add('hide');
+  exitBtn.style.display = 'none';
+  menuBtn.style.display = 'flex';
+});
+
+navLinks.addEventListener('animationend', () => {
+  if (navLinks.classList.contains('hide')) {
+    navLinks.classList.remove('hide');
+  }
+});

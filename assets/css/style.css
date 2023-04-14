@@ -232,8 +232,9 @@ nav {
     justify-content: space-between;
 }
 
-.logo img {
-    width: 1.5rem;
+.logo {
+    width: 1.3rem;
+    height: 1.3rem;
 }
 
 .nav-link {
@@ -282,9 +283,14 @@ nav {
     padding: 0
 }
 
-.menu-button {
-    display: none
+#menuBtn {
+    display: none;
 }
+
+#exitBtn {
+    display: none;
+}
+
 
 /* Home section */
 .home {
@@ -866,6 +872,7 @@ ul.social-media-icons li a:hover {
 
     header {
         width: 100%;
+
     }
 
     nav {
@@ -873,22 +880,84 @@ ul.social-media-icons li a:hover {
         
     }
 
-    .logo img {
+    .logo {
         margin: 0 1rem;
     }
 
     .nav-link {
         display: none;
+        position: absolute;
+        top: 48px;
+        left: 0;
+        width: 100%;
+        background-color: var(--var-color-dark-shades);
+
+    }
+
+    .nav-link ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: top;
+        align-items: center;
+    }
+
+    .nav-link ul > * {
+        font-size: 2.6rem;
+        margin: 1rem;
+    }
+      
+    .nav-link.show {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 48px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--var-color-dark-shades);
+        z-index: 999;
+        animation: roll-down 0.5s forwards;
+      }
+      
+      .nav-link.hide {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 48px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--var-color-dark-shades);
+        z-index: 999;
+        animation: roll-up 0.5s forwards;
+    }
+      
+    @keyframes roll-down {
+        from { transform: translateY(-100%); }
+        to { transform: translateY(0); }
+    }
+      
+    @keyframes roll-up {
+        from { transform: translateY(0); }
+        to { transform: translateY(-100%); }
     }
 
     .download-btn button a .fa-download {
         margin: 0;
     }
 
-    .menu-button {
+    #menuBtn {
         display: flex;
         margin: 0 1rem;
-
+    }
+    
+    #exitBtn {
+        display: none;
+        margin: 0 1rem;
     }
 
     .home h1 {
