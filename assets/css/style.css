@@ -134,7 +134,7 @@ p {
 /* Sections */
 
 .section-1 {
-    background-image: url("assets/images/backgound/background-01.svg");
+    background-image: url("../images/backgound/background-01.svg");
     background-color: var(--var-color-dark-shades);
     color: var(--var-color-light-shades);
     background-position: right;
