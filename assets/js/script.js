@@ -270,28 +270,39 @@ img.setAttribute('src', 'assets/images/skillset/github-white.svg');
 
 // Menu changer unorded navi list and change icons
 const menuBtn = document.getElementById('menuBtn');
-const exitBtn = document.getElementById('exitBtn');
-const navLinks = document.querySelector('.nav-link');
+const closeBtn = document.getElementById('exitBtn');
+const navLink = document.querySelector('.nav-link');
 
 menuBtn.addEventListener('click', () => {
-    navLinks.classList.add('show');
     menuBtn.style.display = 'none';
-    exitBtn.style.display = 'flex';
-    menuBtn.style.opacity = "0";
-    exitBtn.style.opacity = "1";
+    closeBtn.style.display = 'flex';
+    navLink.classList.add('roll-down')
+    navLink.classList.remove('roll-up')
+    navLink.style.display = 'block';
+
 });
 
-exitBtn.addEventListener('click', () => {
-    navLinks.classList.remove('show');
-    navLinks.classList.add('hide');
-    exitBtn.style.display = 'none';
+closeBtn.addEventListener('click', () => {
+    closeBtn.style.display = 'none';
     menuBtn.style.display = 'flex';
-    menuBtn.style.opacity = "1";
-    exitBtn.style.opacity = "0";
+    navLink.classList.remove('roll-down')
+    navLink.classList.add('roll-up')
+    // Listen for the animationend event
+    navLink.addEventListener('animationend', () => {
+        navLink.style.display = 'none';
+    }, { once: true }); // Remove the event listener after it's been called once
 });
 
-navLinks.addEventListener('animationend', () => {
-    if (navLinks.classList.contains('hide')) {
-        navLinks.classList.remove('hide');
-    }
+// When user click links in ul menu disappear and closeBtn change into the
+const navLinks = document.querySelectorAll('.nav-link li');
+
+navLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+        // Toggle the display of the nav-link and closeBtn elements
+        const navLink = document.querySelector('.nav-link');
+        const closeBtn = document.getElementById('exitBtn');
+        navLink.style.display = 'none';
+        closeBtn.style.display = 'none';
+        menuBtn.style.display = 'flex';
+    });
 });

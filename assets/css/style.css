@@ -74,7 +74,7 @@ p {
     width: 100%;
     height: 100%;
     backdrop-filter: blur(10px);
-    z-index: 999;
+    z-index: 1001;
 }
 
 .thank-you-message {
@@ -82,7 +82,7 @@ p {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 1000;
+    z-index: 1002;
     width: 50vw;
     height: 50vh;
     display: flex;
@@ -281,6 +281,10 @@ nav {
     font-size: 1rem;
     color: var(--var-color-light-shades);
     padding: 0
+}
+
+.menu-button {
+    display: none;
 }
 
 #menuBtn {
@@ -496,6 +500,16 @@ video {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+}
+
+.projects-container div.project:nth-of-type(even) {
+    background-color: var(--var-color-dark-shades);
+    color: var(--var-color-light-shades);
+}
+
+.projects-container div.project:nth-of-type(even) .links a:nth-child(2) {
+    background-color: var(--var-color-light-shades);
+    color: var(--var-color-dark-shades);
 }
 
 .project {
@@ -872,17 +886,30 @@ ul.social-media-icons li a:hover {
 
     header {
         width: 100%;
-        z-index: 998;
+        z-index: 1000;
 
     }
 
     nav {
         justify-content: space-between;
+        z-index: 1000;
         
     }
 
     .logo {
         margin: 0 1rem;
+    }
+
+    .nav-link ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        align-items: left;
+        margin-top: 2rem;
+    }
+
+    .nav-link ul > * {
+        font-size: 1.8rem;
     }
 
     .nav-link {
@@ -891,85 +918,39 @@ ul.social-media-icons li a:hover {
         top: 48px;
         left: 0;
         width: 100%;
-        background-color: var(--var-color-dark-shades)
-    }
-
-    .nav-link ul {
-        display: flex;
-        flex-direction: column;
-        justify-content: top;
-        align-items: center;
-    }
-
-    .nav-link ul > * {
-        font-size: 2.6rem;
-        margin: 1rem;
-    }
-      
-    .nav-link.show {
-        display: block;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        position: fixed;
-        top: 48px;
-        left: 0;
-        width: 100%;
         height: 100%;
         background-color: var(--var-color-dark-shades);
-        z-index: 997;
+        z-index: 999;
+    }
+    
+    .roll-down {
         animation: roll-down 0.5s forwards;
-        animation-fill-mode: forwards;
     }
-      
-    .nav-link.hide {
-        display: block;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        position: fixed;
-        top: 48px;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: var(--var-color-dark-shades);
-        z-index: 997;
+
+    .roll-up {
         animation: roll-up 0.5s forwards;
-        animation-fill-mode: forwards;
     }
-      
+
     @keyframes roll-down {
         0% {
             transform: translateY(-100%);
-            opacity: 0;
-        }
-        50% {
-            transform: translateY(-48px);
-            opacity: 0;
         }
         100% {
-            transform: translateY(0);
-            opacity: 1;
+            transform: translateY(0%);
         }
-        }
+    }
     
-        @keyframes roll-up {
-            0% {
-            transform: translateY(0);
-            opacity: 1;
-            }
-            50% {
-            transform: translateY(-48px);
-            opacity: 0;
-            }
-            100% {
-            transform: translateY(-100%);
-            opacity: 0;
-            }
-        }   
+    @keyframes roll-up {
+        0% {
+        transform: translateY(0%);
+        }
+        100% {
+        transform: translateY(-100%);
+        }
+    }
 
-    .download-btn button a .fa-download {
-        margin: 0;
+    .menu-button {
+        display: flex;
     }
 
     #menuBtn {
@@ -980,6 +961,10 @@ ul.social-media-icons li a:hover {
     #exitBtn {
         display: none;
         margin: 0 1rem;
+    }
+
+    .download-btn button a .fa-download {
+        margin: 0;
     }
 
     .home h1 {
@@ -1071,6 +1056,10 @@ ul.social-media-icons li a:hover {
         width: 2.5rem;
     }
 
+    .section-8 .describe-myself {
+        margin-top: 4rem;
+    }
+
     #projectsText {
         font-size: 1rem;
     }
@@ -1087,16 +1076,6 @@ ul.social-media-icons li a:hover {
     
     .projects-container {
         justify-content: center;
-    }
-
-    .projects-container div.project:nth-of-type(even) {
-        background-color: var(--var-color-dark-shades);
-        color: var(--var-color-light-shades);
-    }
-
-    .projects-container div.project:nth-of-type(even) .links a:nth-child(2) {
-        background-color: var(--var-color-light-shades);
-        color: var(--var-color-dark-shades);
     }
 
     .project {
@@ -1182,27 +1161,35 @@ ul.social-media-icons li a:hover {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        
     }
 
     .col-md-6 {
         width: 100%;
+        margin: 0 0 1rem 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .col-md-6 h4 {
         padding: 0 1rem;
+        margin: 0.5rem;
     }
 
     ul.list-unstyled {
         margin: 0;
         padding: 0 1rem;
         font-family: var(--var-font-primary);
-        column-count: 3;
-        
+        column-count: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; 
     }
 
     ul.social-media-icons {
         margin: 0 auto;
-        padding: 0 1rem;
+        padding: 1rem;
       }
 }
