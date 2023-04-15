@@ -764,9 +764,402 @@ ul.social-media-icons li a:hover {
   */
   
 @media (min-width: 768px) and (max-width: 1024px) {
+    h1 {
+        font-size: 5rem;
+        line-height: 0.8
+    }
     
-    /* CSS */
+    h2 {
+        font-size: 5rem;
+        line-height: 0.6;
+    }
     
+    
+    h3 {
+        font-size: 2.5rem;
+        line-height: 1;
+    }
+    
+    h4 {
+        font-size: 1.2rem;
+    }
+      
+    p {
+        font-size: 1rem;
+        padding: 0.5rem 5rem;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .thank-you-message .fa-square-xmark {
+        font-size: 2rem;
+    }
+
+    .thank-you-message h2 {
+        font-weight: 300;
+        padding: 1rem;
+    }
+
+    .thank-you-message h2 .fa-circle {
+        font-size: 1rem;
+    }
+
+    .section-1 {
+        height: 70vh;
+    }
+    
+    .section-2 {
+        height: 70vh;
+    }
+    
+    .section-3 {
+        height: 70vh;
+    }
+    
+    .section-4 {
+        height: auto;
+        margin: 3rem 0;
+    }
+    
+    .section-5 {
+        height: 70vh;
+    }
+    
+    .section-6 {
+        height: auto;
+        margin: 3rem 0;
+    }
+    
+    .section-7 {
+        height: 70vh;
+    }
+    
+    .section-8 {
+        height: auto;
+        margin: 3rem 0;
+        
+    }
+    
+    .section-9 {
+        height: auto;
+        margin: 3rem 0;
+    }
+    
+    .section-10 {
+        height: 70vh;
+    }
+
+    header {
+        width: 100%;
+        z-index: 1000;
+
+    }
+
+    nav {
+        justify-content: space-between;
+        z-index: 1000;
+        
+    }
+
+    .logo {
+        margin: 0 1rem;
+    }
+
+    .nav-link ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        align-items: left;
+        margin-top: 2rem;
+    }
+
+    .nav-link ul > * {
+        font-size: 1.8rem;
+    }
+
+    .nav-link {
+        display: none;
+        position: fixed;
+        top: 48px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--var-color-dark-shades);
+        z-index: 999;
+    }
+    
+    .roll-down {
+        animation: roll-down 0.5s forwards;
+    }
+
+    .roll-up {
+        animation: roll-up 0.5s forwards;
+    }
+
+    @keyframes roll-down {
+        0% {
+            transform: translateY(-100%);
+        }
+        100% {
+            transform: translateY(0%);
+        }
+    }
+    
+    @keyframes roll-up {
+        0% {
+        transform: translateY(0%);
+        }
+        100% {
+        transform: translateY(-100%);
+        }
+    }
+
+    .menu-button {
+        display: flex;
+    }
+
+    #menuBtn {
+        display: flex;
+        margin: 0 1rem;
+    }
+    
+    #exitBtn {
+        display: none;
+        margin: 0 1rem;
+    }
+
+    .download-btn button a .fa-download {
+        margin: 0;
+    }
+
+    .home h1 {
+        margin: 0 0 0 3rem;
+        line-height: 1.2;
+        padding: 0 0 5rem 0;
+    }
+
+    .home .fa-circle {
+        font-size: 1rem;
+        
+    }
+
+    .span-container {
+        width: 165px;
+    }
+
+    #web, 
+    #app, 
+    #game {
+        right: 0;
+        font-size: 5rem;
+    }
+
+    .about h2 {
+        margin-top: 40px;
+    }
+
+    .about .fa-circle {
+        font-size: 1rem;
+        margin: -3px
+    }
+
+    #doText {
+        font-size: 5rem;
+    }
+
+    .about .blinking-cursor {
+        font-size: 7rem;
+        margin-left: -15px;
+    }
+
+    .describe-myself h2{
+        margin: 3rem 0 3rem 0;
+        
+    }
+
+    .creation-container {
+        font-size: 1rem;
+    }
+
+    .describe-myself .fa-circle {
+        font-size: 0.8rem;
+        margin-left: -10px
+    }
+
+    #creationText {
+        font-size: 2.3rem;
+        line-height: 1.2;
+    }
+
+    .describe-myself .blinking-cursor {
+        font-size: 3.5rem;
+        margin-left: -15px;
+    }
+
+    .describe-myself p {
+        margin-top: 0.7rem;
+    }
+
+    #technologyText {
+        font-size: 2.3rem;
+    }
+
+    .skill-container .categories {
+        margin-bottom: 1rem;
+    }
+
+    .categories .btn-category {
+        margin: 0 1rem 0rem 1rem;
+        font-size: 1rem;
+    }
+
+    .skill-container .images {
+        padding: 0 6rem;
+    }
+
+    .skill-container .images > * {
+        margin: 1rem;
+        width: 5rem;
+    }
+
+    .section-8 .describe-myself {
+        margin-top: 4rem;
+    }
+
+    #projectsText {
+        font-size: 2.3rem;
+    }
+
+    .projects-categories {
+        margin-bottom: 3rem;
+        margin-top: 5rem;
+    }
+
+    .projects .projects-btn-category {
+        margin: 0 0.3rem 0rem 0.3rem;
+        font-size: 1rem;
+    }
+    
+    .projects-container {
+        justify-content: center;
+    }
+
+    .project {
+        width: 30%;
+        margin-bottom: 3rem;
+    }
+  
+    .project h3 {
+        font-size: 1rem;
+    }
+
+    .project .technology {
+        justify-content: center;
+        padding: 1rem 1rem 0 1rem;
+    }
+    
+    .project .technology img {
+        width: 2.5rem;
+        margin: 0.5rem;
+    }
+
+    .project p {
+        margin-bottom: 1.3rem;
+        padding: 1rem;
+    }
+
+    .contact h3 {
+        text-align:center;
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+    }
+
+    form {
+        max-width: 60rem;
+        margin: 0 auto 3rem auto;
+    }
+
+    .form-group {
+        margin: 0.5rem;
+    }
+
+    label {
+        font-size: 0.9rem;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        padding: 0.2rem 0.5rem;
+        font-size: 1rem;
+        border-radius: 0.5rem;
+        width: 100%;
+        box-sizing: border-box;
+        background-color: transparent;
+        color: var(--var-color-dark-shades);
+        border: 1px solid var(--var-color-light-accent);
+        font-family: var(--var-font-primary);
+        outline: none;
+    }
+
+    textarea {
+        height: 150px;
+    }
+
+    button[type="submit"] {
+        background-color: var(--var-color-main-brand);
+        color: var(--var-color-light-shades);
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 0.5rem;
+        font-family: var(--var-font-headers);
+        font-size: 1rem;
+        cursor: pointer;
+        transition: transform 0.2s ease-in-out;
+        margin-left: 0.5rem;
+    }
+      
+    button[type="submit"]:hover {
+        transform: translateY(-0.25rem);
+    }
+
+    .row {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .col-md-6 {
+        width: 100%;
+        margin: 0 0 1rem 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .col-md-6 h4 {
+        padding: 0 1rem;
+        margin: 0.5rem;
+    }
+
+    ul.list-unstyled {
+        margin: 0;
+        padding: 0 1rem;
+        font-family: var(--var-font-primary);
+        column-count: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        align-items: left; 
+    }
+
+    ul.social-media-icons {
+        margin: 0 auto;
+        padding: 1rem;
+      }
   }
   
   /* 
