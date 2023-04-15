@@ -833,7 +833,8 @@ ul.social-media-icons li a:hover {
     }
     
     .section-7 {
-        height: 70vh;
+        height: auto;
+        margin: 3rem 0;
     }
     
     .section-8 {
@@ -848,7 +849,7 @@ ul.social-media-icons li a:hover {
     }
     
     .section-10 {
-        height: 70vh;
+        height: 100vh;
     }
 
     header {
@@ -2059,7 +2060,8 @@ ul.social-media-icons li a:hover {
     }
     
     .section-7 {
-        height: 70vh;
+        height: auto;
+        margin: 3rem 0;
     }
     
     .section-8 {
