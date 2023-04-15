@@ -1094,7 +1094,6 @@ ul.social-media-icons li a:hover {
 
     form {
         max-width: 60rem;
-        width: 100%;
         margin: 0 auto 3rem auto;
     }
 
@@ -1208,7 +1207,7 @@ ul.social-media-icons li a:hover {
     
     p {
         font-size: 1rem;
-        padding: 0.5rem 1rem;
+        padding: 0.5rem 5rem;
     }
 
     .container {
@@ -1442,7 +1441,8 @@ ul.social-media-icons li a:hover {
     }
 
     .skill-container .images {
-        padding: 0 0.5rem;
+        padding: 0 8rem;
+
     }
 
     .skill-container .images > * {
@@ -1494,6 +1494,7 @@ ul.social-media-icons li a:hover {
 
     .project p {
         margin-bottom: 1.3rem;
+        padding: 1rem 1rem;
     }
 
     .contact h3 {
@@ -1576,11 +1577,11 @@ ul.social-media-icons li a:hover {
         margin: 0;
         padding: 0 1rem;
         font-family: var(--var-font-primary);
-        column-count: 2;
+        column-count: 1;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center; 
+        justify-content: left;
+        align-items: left; 
     }
 
     ul.social-media-icons {
