@@ -134,7 +134,7 @@ p {
 /* Sections */
 
 .section-1 {
-    background-image: url("../images/backgound/background-01.svg");
+    background-image: url("../images/backgound/background-01.jpg");
     background-color: var(--var-color-dark-shades);
     color: var(--var-color-light-shades);
     background-position: right;
@@ -556,7 +556,7 @@ video {
 .project .technology {
     display: flex;
     flex-wrap: wrap;
-    justify-content: left;
+    justify-content: center;
     padding: 1rem 1rem 0 1rem;
 }
 
