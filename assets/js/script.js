@@ -306,3 +306,22 @@ navLinks.forEach((link) => {
         menuBtn.style.display = 'flex';
     });
 });
+
+
+// Sub-navbar appear when user scroll down
+// Get the height of the main navbar
+var mainNavbarHeight = document.querySelector('.nav-link').offsetHeight;
+
+// Add a scroll event listener to the window
+window.addEventListener('scroll', function() {
+  // Get the current scroll position of the page
+  var scrollPosition = window.scrollY;
+  
+  // If the user has scrolled past the height of the main navbar, show the sub navbar
+  if (scrollPosition > mainNavbarHeight) {
+    document.querySelector('.sub-navbar').style.display = 'flex';
+  } else {
+    // Otherwise, hide the sub navbar
+    document.querySelector('.sub-navbar').style.display = 'none';
+  }
+});

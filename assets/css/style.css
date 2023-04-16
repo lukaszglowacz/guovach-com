@@ -295,6 +295,29 @@ nav {
     display: none;
 }
 
+/* Sub navbar */
+
+.sub-navbar {
+    position: absolute;
+    top: 48px; /* Change this value to the height of your main navbar */
+    left: 0;
+    width: 100%;
+    background-color: var(--var-color-light-shades);
+    color: var(--var-color-dark-shades);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.sub-navbar p {
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.sub-navbar p span {
+    color: var(--var-color-main-brand);
+}
+
 
 /* Home section */
 .home {
@@ -1044,11 +1067,11 @@ ul.social-media-icons li a:hover {
     }
     
     .projects-container {
-        justify-content: center;
+        justify-content: space-between;
     }
 
     .project {
-        width: 30%;
+        width: 29%;
         margin-bottom: 3rem;
     }
   
