@@ -30,7 +30,7 @@ displaySpans();
 // Add loading text to the beginning of the page and activate it when page is not loaded yet
 document.onreadystatechange = function () {
     const loadingButton = document.getElementById('loadingButton');
-    const overlay = document.getElementById('overlay')
+    const overlay = document.getElementById('overlay');
 
     if (document.readyState === 'loading') {
         // Show the loading button while page is loading
@@ -269,43 +269,53 @@ let img = document.getElementById('toChange');
 img.setAttribute('src', 'assets/images/skillset/github-white.svg');
 
 // Menu changer unorded navi list and change icons
-const menuBtn = document.getElementById('menuBtn');
-const closeBtn = document.getElementById('exitBtn');
-const navLink = document.querySelector('.nav-link');
 
-menuBtn.addEventListener('click', () => {
-    menuBtn.style.display = 'none';
-    closeBtn.style.display = 'flex';
-    navLink.classList.add('roll-down')
-    navLink.classList.remove('roll-up')
-    navLink.style.display = 'block';
-
-});
-
-closeBtn.addEventListener('click', () => {
-    closeBtn.style.display = 'none';
-    menuBtn.style.display = 'flex';
-    navLink.classList.remove('roll-down')
-    navLink.classList.add('roll-up')
-    // Listen for the animationend event
-    navLink.addEventListener('animationend', () => {
-        navLink.style.display = 'none';
-    }, { once: true }); // Remove the event listener after it's been called once
-});
-
-// When user click links in ul menu disappear and closeBtn change into the
-const navLinks = document.querySelectorAll('.nav-link li');
-
-navLinks.forEach((link) => {
-    link.addEventListener('click', () => {
-        // Toggle the display of the nav-link and closeBtn elements
-        const navLink = document.querySelector('.nav-link');
+function menuFunction() {
+    const screenWidth = window.innerWidth;
+    if (screenWidth >= 320 && screenWidth <= 1024) {
+        const menuBtn = document.getElementById('menuBtn');
         const closeBtn = document.getElementById('exitBtn');
-        navLink.style.display = 'none';
-        closeBtn.style.display = 'none';
-        menuBtn.style.display = 'flex';
-    });
-});
+        const navLink = document.querySelector('.nav-link');
+
+        menuBtn.addEventListener('click', () => {
+            menuBtn.style.display = 'none';
+            closeBtn.style.display = 'flex';
+            navLink.classList.add('roll-down');
+            navLink.classList.remove('roll-up');
+            navLink.style.display = 'block';
+        });
+
+        closeBtn.addEventListener('click', () => {
+            closeBtn.style.display = 'none';
+            menuBtn.style.display = 'flex';
+            navLink.classList.remove('roll-down');
+            navLink.classList.add('roll-up');
+            // Listen for the animationend event
+            navLink.addEventListener('animationend', () => {
+                navLink.style.display = 'none';
+            }, { once: true }); // Remove the event listener after it's been called once
+        });
+
+        // When user click links in ul menu disappear and closeBtn change into the
+        const navLinks = document.querySelectorAll('.nav-link li');
+
+        navLinks.forEach((link) => {
+            link.addEventListener('click', () => {
+                // Toggle the display of the nav-link and closeBtn elements
+                navLink.style.display = 'none';
+                closeBtn.style.display = 'none';
+                menuBtn.style.display = 'flex';
+            });
+        });
+    }
+}
+
+// Call the function on page load
+menuFunction();
+
+
+
+
 
 
 // Sub-navbar appear when user scroll down
@@ -313,15 +323,15 @@ navLinks.forEach((link) => {
 var mainNavbarHeight = document.querySelector('.nav-link').offsetHeight;
 
 // Add a scroll event listener to the window
-window.addEventListener('scroll', function() {
-  // Get the current scroll position of the page
-  var scrollPosition = window.scrollY;
-  
-  // If the user has scrolled past the height of the main navbar, show the sub navbar
-  if (scrollPosition > mainNavbarHeight) {
-    document.querySelector('.sub-navbar').style.display = 'flex';
-  } else {
-    // Otherwise, hide the sub navbar
-    document.querySelector('.sub-navbar').style.display = 'none';
-  }
+window.addEventListener('scroll', function () {
+    // Get the current scroll position of the page
+    var scrollPosition = window.scrollY;
+
+    // If the user has scrolled past the height of the main navbar, show the sub navbar
+    if (scrollPosition > mainNavbarHeight) {
+        document.querySelector('.sub-navbar').style.display = 'flex';
+    } else {
+        // Otherwise, hide the sub navbar
+        document.querySelector('.sub-navbar').style.display = 'none';
+    }
 });
