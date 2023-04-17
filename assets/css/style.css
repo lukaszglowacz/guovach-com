@@ -93,7 +93,7 @@ p {
   }
 
   .thank-you-message .fa-square-xmark {
-    font-size: 3rem;
+    font-size: 2rem;
     color: var(--var-color-main-brand);
     position: absolute;
     top: 0;
@@ -112,11 +112,12 @@ p {
     text-align: center;
     line-height: 1.5;
     font-weight: 300;
+    font-size: 2.5rem
   }
   
   .thank-you-message .fa-circle {
     color: var(--var-color-main-brand);
-    font-size: 1rem;
+    font-size: 0.7rem;
   }
 
 .loading-button {
@@ -1635,17 +1636,24 @@ ul.social-media-icons li a:hover {
         width: 100%;
     }
 
+    .thank-you-message {
+        width: 100%;
+    }
+
     .thank-you-message .fa-square-xmark {
-        font-size: 0.7rem;
+        font-size: 2rem;
+        margin-right: 0.5rem;
     }
 
     .thank-you-message h2 {
+        font-size: 1.8rem;
         font-weight: 300;
-        padding: 1rem;
+        padding: 0.5rem;
+        line-height: 1.5;
     }
 
     .thank-you-message h2 .fa-circle {
-        font-size: 0.3rem;
+        font-size: 0.5rem;
     }
 
     .section-1 {
