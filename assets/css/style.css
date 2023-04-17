@@ -86,15 +86,14 @@ p {
     z-index: 1002;
     width: 50vw;
     height: 50vh;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    display: none;
   }
 
   .thank-you-message .fa-square-xmark {
-    font-size: 2rem;
+    font-size: 3rem;
     color: var(--var-color-main-brand);
     position: absolute;
     top: 0;
@@ -115,7 +114,7 @@ p {
     font-weight: 300;
   }
   
-  .thank-you-message p .fa-circle {
+  .thank-you-message .fa-circle {
     color: var(--var-color-main-brand);
     font-size: 1rem;
   }
@@ -809,17 +808,24 @@ ul.social-media-icons li a:hover {
         width: 100%;
     }
 
+    .thank-you-message {
+        width: 100%;
+    }
+
     .thank-you-message .fa-square-xmark {
         font-size: 2rem;
+        margin-right: 0.5rem;
     }
 
     .thank-you-message h2 {
+        font-size: 2.8rem;
         font-weight: 300;
-        padding: 1rem;
+        padding: 0.5rem;
+        line-height: 1.5;
     }
 
     .thank-you-message h2 .fa-circle {
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 
     .section-1 {
@@ -1213,17 +1219,25 @@ ul.social-media-icons li a:hover {
         width: 100%;
     }
 
+    .thank-you-message {
+        width: 100%;
+    }
+
+
     .thank-you-message .fa-square-xmark {
-        font-size: 0.7rem;
+        font-size: 2rem;
+        margin-right: 0.5rem;
     }
 
     .thank-you-message h2 {
+        font-size: 2.8rem;
         font-weight: 300;
-        padding: 1rem;
+        padding: 0.5rem;
+        line-height: 1.5;
     }
 
     .thank-you-message h2 .fa-circle {
-        font-size: 0.3rem;
+        font-size: 0.5rem;
     }
 
     .section-1 {
@@ -2030,17 +2044,24 @@ ul.social-media-icons li a:hover {
         width: 100%;
     }
 
+    .thank-you-message {
+        width: 100%;
+    }
+
     .thank-you-message .fa-square-xmark {
-        font-size: 0.7rem;
+        font-size: 2rem;
+        margin-right: 0.5rem;
     }
 
     .thank-you-message h2 {
+        font-size: 1.8rem;
         font-weight: 300;
-        padding: 1rem;
+        padding: 0.5rem;
+        line-height: 1.5;
     }
 
     .thank-you-message h2 .fa-circle {
-        font-size: 0.3rem;
+        font-size: 0.5rem;
     }
 
     .section-1 {

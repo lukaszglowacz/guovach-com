@@ -313,11 +313,6 @@ function menuFunction() {
 // Call the function on page load
 menuFunction();
 
-
-
-
-
-
 // Sub-navbar appear when user scroll down
 // Get the height of the main navbar
 var mainNavbarHeight = document.querySelector('.nav-link').offsetHeight;
