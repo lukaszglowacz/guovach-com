@@ -515,7 +515,7 @@ video {
 .projects-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .projects-container div.project:nth-of-type(even) {
