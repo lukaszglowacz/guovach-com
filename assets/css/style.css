@@ -419,10 +419,12 @@ video {
 }
 
 .describe-myself .fa-circle {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     color: var(--var-color-main-brand);
-    margin-left: -10px;
     padding: 0;
+    margin-left: -18px;
+    display: inline;
+    
 }
 
 #creationText {
@@ -432,12 +434,13 @@ video {
 }
 
 .describe-myself .blinking-cursor {
-    font-size: 3.5rem;
+    font-size: 3.2rem;
     vertical-align: center; 
+    justify-content: left;
     animation: blink 1s infinite;
     font-weight: 300;
     display: inline;
-    margin-left: -33px;
+    margin-left: -30px;
 }
 
 .describe-myself p span {
