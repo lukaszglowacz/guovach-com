@@ -697,7 +697,7 @@ footer {
   ul.list-unstyled li {
     list-style: none;
     margin: 0;
-    padding-right: 0.5rem;
+    padding-right: 2rem;
     border: none;
     font-weight: 100;
 }
@@ -747,13 +747,28 @@ ul.social-media-icons li a:hover {
 }
 
   /* Style the social media icons */
-  i.fab {
+i.fab {
     font-size: 2rem;
-  }
+}
   
-  i.fa-brands {
+i.fa-brands {
     font-size: 2rem;
-  }
+}
+
+/* Copyright footer text */
+.copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+}
+
+.copyright p {
+    font-size: 0.9rem;
+    font-family: var(--var-font-primary);
+    text-align: center;
+    font-weight: 200;
+}
 
   /* 
   ##Device = Desktops
@@ -764,7 +779,7 @@ ul.social-media-icons li a:hover {
   
     /* CSS */
     
-  }
+}
   
   /* 
     ##Device = Laptops, Desktops
@@ -775,7 +790,7 @@ ul.social-media-icons li a:hover {
     
     /* CSS */
     
-  }
+}
   
   /* 
     ##Device = Tablets, Ipads (portrait)
@@ -1150,43 +1165,8 @@ ul.social-media-icons li a:hover {
     button[type="submit"]:hover {
         transform: translateY(-0.25rem);
     }
-
-    .row {
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .col-md-6 {
-        width: 100%;
-        margin: 0 0 1rem 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .col-md-6 h4 {
-        padding: 0 1rem;
-        margin: 0.5rem;
-    }
-
-    ul.list-unstyled {
-        margin: 0;
-        padding: 0 1rem;
-        font-family: var(--var-font-primary);
-        column-count: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: left;
-    }
-
-    ul.social-media-icons {
-        margin: 0 auto;
-        padding: 1rem;
-      }
-  }
-  
+}
+    
   /* 
     ##Device = Tablets, Ipads (landscape)
     ##Screen = B/w 768px to 1024px
@@ -1568,41 +1548,6 @@ ul.social-media-icons li a:hover {
     button[type="submit"]:hover {
         transform: translateY(-0.25rem);
     }
-
-    .row {
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .col-md-6 {
-        width: 100%;
-        margin: 0 0 1rem 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .col-md-6 h4 {
-        padding: 0 1rem;
-        margin: 0.5rem;
-    }
-
-    ul.list-unstyled {
-        margin: 0;
-        padding: 0 1rem;
-        font-family: var(--var-font-primary);
-        column-count: 2;
-        display: flex;
-        flex-direction: column;
-        justify-content: left;
-    }
-
-    ul.social-media-icons {
-        margin: 0 auto;
-        padding: 1rem;
-      }
   }
   
   /* 
@@ -1987,40 +1932,14 @@ ul.social-media-icons li a:hover {
         transform: translateY(-0.25rem);
     }
 
-    .row {
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-    }
-
     .col-md-6 {
-        width: 100%;
-        margin: 0 0 1rem 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .col-md-6 h4 {
-        padding: 0 1rem;
         margin: 0.5rem;
     }
 
-    ul.list-unstyled {
-        margin: 0;
-        padding: 0 1rem;
-        font-family: var(--var-font-primary);
-        column-count: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: left;
+    .col-md-6 h4 {
+        margin-bottom: 1rem;
+        font-weight: 300;
     }
-
-    ul.social-media-icons {
-        margin: 0 auto;
-        padding: 1rem;
-      }
 }
 
 /* 
@@ -2404,7 +2323,7 @@ ul.social-media-icons li a:hover {
 
     .col-md-6 {
         width: 100%;
-        margin: 0 0 1rem 0;
+        margin: 1rem 0 1rem 0;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -2418,13 +2337,18 @@ ul.social-media-icons li a:hover {
 
     ul.list-unstyled {
         margin: 0;
-        padding: 0 1rem;
+        padding: 0;
         font-family: var(--var-font-primary);
-        column-count: 2;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center; 
+        width: 100%;
+    }
+
+    ul.list-unstyled li{
+        text-align: center;
+        padding: 0
     }
 
     ul.social-media-icons {
