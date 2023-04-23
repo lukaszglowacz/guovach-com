@@ -14,8 +14,6 @@
 
 * {
     line-height: 1.5;
-    
-    
 }
 
 body {
@@ -1940,6 +1938,20 @@ i.fa-brands {
         margin-bottom: 1rem;
         font-weight: 300;
     }
+
+    ul.social-media-icons {
+        margin: 0 auto;
+        padding: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: left;
+        /* align-items: center; */
+    }
+
+    ul.social-media-icons li {
+        display: inline-block;
+        margin-right: 1.3rem;
+    }
 }
 
 /* 
@@ -2354,6 +2366,10 @@ i.fa-brands {
     ul.social-media-icons {
         margin: 0 auto;
         padding: 1rem;
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: cetner;
+        align-items: center;
       }
 }
 
