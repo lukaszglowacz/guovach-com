@@ -231,9 +231,14 @@ nav {
     justify-content: space-between;
 }
 
+nav > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .logo {
-    width: 1.3rem;
-    height: 1.3rem;
+    height: 1.8rem;
 }
 
 .nav-link {
@@ -268,7 +273,8 @@ nav {
 .download-btn a .fa-download {
     font-size: 1rem;
     color: var(--var-color-light-shades);
-    padding: 0
+    padding: 0;
+    margin-left: 0.5rem;
 }
 
 .menu-button {
@@ -277,10 +283,12 @@ nav {
 
 #menuBtn {
     display: none;
+    margin-right: 0.5rem;
 }
 
 #exitBtn {
     display: none;
+    margin-right: 0.5rem;
 }
 
 /* Sub navbar */
@@ -961,12 +969,10 @@ i.fa-brands {
 
     #menuBtn {
         display: flex;
-        margin: 0 1rem;
     }
     
     #exitBtn {
         display: none;
-        margin: 0 1rem;
     }
 
     .download-btn button a .fa-download {
@@ -1338,12 +1344,10 @@ i.fa-brands {
 
     #menuBtn {
         display: flex;
-        margin: 0 1rem;
     }
     
     #exitBtn {
         display: none;
-        margin: 0 1rem;
     }
 
     .download-btn button a .fa-download {
@@ -1720,12 +1724,11 @@ i.fa-brands {
 
     #menuBtn {
         display: flex;
-        margin: 0 1rem;
+
     }
     
     #exitBtn {
         display: none;
-        margin: 0 1rem;
     }
 
     .download-btn button a .fa-download {
@@ -2124,12 +2127,10 @@ i.fa-brands {
 
     #menuBtn {
         display: flex;
-        margin: 0 1rem;
     }
     
     #exitBtn {
         display: none;
-        margin: 0 1rem;
     }
 
     .download-btn button a .fa-download {
