@@ -316,6 +316,7 @@ menuFunction();
 // Sub-navbar appear when user scroll down
 // Get the height of the main navbar
 var mainNavbarHeight = document.querySelector('.nav-link').offsetHeight;
+var subNavbarTimeout;
 
 // Add a scroll event listener to the window
 window.addEventListener('scroll', function () {
@@ -325,6 +326,16 @@ window.addEventListener('scroll', function () {
     // If the user has scrolled past the height of the main navbar, show the sub navbar
     if (scrollPosition > mainNavbarHeight) {
         document.querySelector('.sub-navbar').style.display = 'flex';
+
+        // Clear the previous timeout if it exists
+        if (subNavbarTimeout) {
+            clearTimeout(subNavbarTimeout);
+        }
+
+        // Set a new timeout to hide the sub-navbar after 5 seconds
+        subNavbarTimeout = setTimeout(function () {
+            document.querySelector('.sub-navbar').style.display = 'none';
+        }, 5000);
     } else {
         // Otherwise, hide the sub navbar
         document.querySelector('.sub-navbar').style.display = 'none';
