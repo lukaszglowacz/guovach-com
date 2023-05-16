@@ -277,6 +277,7 @@ nav>a {
 .navlink-right {
     display: flex;
     align-items: center;
+    height: 100%;
 }
 
 .nav-link ul {
@@ -304,10 +305,15 @@ nav>a {
 }
 
 .download-btn a .fa-download {
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: var(--var-color-light-shades);
     padding: 0;
     margin-right: 1rem;
+    vertical-align: bottom;
+}
+
+.menu-button .fa-solid {
+    font-size: 1.7rem;
 }
 
 .menu-button {
@@ -964,7 +970,7 @@ i.fa-brands {
         margin-top: 2rem;
     }
 
-    .nav-link ul>* {
+    .nav-link ul > * {
         font-size: 1.8rem;
     }
 
@@ -1019,8 +1025,9 @@ i.fa-brands {
         display: none;
     }
 
-    .download-btn button a .fa-download {
-        margin: 0;
+    .download-btn a .fa-download {
+        margin-right: 4rem;
+        vertical-align: bottom;
     }
 
     .home h1 {
@@ -1396,8 +1403,9 @@ i.fa-brands {
         display: none;
     }
 
-    .download-btn button a .fa-download {
-        margin: 0;
+    .download-btn a .fa-download {
+        margin-right: 4rem;
+        vertical-align: bottom;
     }
 
     .home h1 {
@@ -1700,6 +1708,10 @@ i.fa-brands {
         margin: 3rem 0;
     }
 
+    .section-11 {
+        padding: 0;
+    }
+
     header {
         width: 100%;
         z-index: 1000;
@@ -1779,8 +1791,9 @@ i.fa-brands {
         display: none;
     }
 
-    .download-btn button a .fa-download {
-        margin: 0;
+    .download-btn a .fa-download {
+        margin-right: 3rem;
+        vertical-align: bottom;
     }
 
     .home h1 {
@@ -2145,6 +2158,13 @@ i.fa-brands {
         height: 100%;
         background-color: var(--var-color-dark-shades);
         z-index: 999;
+    }
+
+    .download-btn a .fa-download {
+        font-size: 1.4rem;
+        color: var(--var-color-light-shades);
+        padding: 0;
+        margin-right: 2rem;
     }
 
     .roll-down {
