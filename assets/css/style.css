@@ -309,7 +309,7 @@ nav>a {
     color: var(--var-color-light-shades);
     padding: 0;
     margin-right: 1rem;
-    vertical-align: bottom;
+    vertical-align: baseline;
 }
 
 .menu-button .fa-solid {
