@@ -10,6 +10,7 @@
     --var-font-headers: 'Montserrat', sans-serif;
     --var-font-big-headers: 'Khand', sans-serif;
 }
+
 /* Main classes */
 
 * {
@@ -29,7 +30,7 @@ h1 {
     font-family: var(--var-font-big-headers);
     font-size: 5rem;
     line-height: 1.3;
-    
+
 }
 
 h2 {
@@ -88,9 +89,9 @@ p {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-  }
+}
 
-  .thank-you-message .fa-square-xmark {
+.thank-you-message .fa-square-xmark {
     font-size: 2rem;
     color: var(--var-color-main-brand);
     position: absolute;
@@ -99,24 +100,24 @@ p {
     margin: 0;
     padding: 0;
     cursor: pointer;
-  }
+}
 
-  .thank-you-message .fa-square-xmark:hover {
+.thank-you-message .fa-square-xmark:hover {
     transition: transform 0.3s ease-in-out;
     color: var(--var-color-dark-accent);
-  }
-  
-  .thank-you-message h2 {
+}
+
+.thank-you-message h2 {
     text-align: center;
     line-height: 1.5;
     font-weight: 300;
     font-size: 2.5rem
-  }
-  
-  .thank-you-message .fa-circle {
+}
+
+.thank-you-message .fa-circle {
     color: var(--var-color-main-brand);
     font-size: 0.7rem;
-  }
+}
 
 .loading-button {
     position: fixed;
@@ -131,6 +132,7 @@ p {
     font-size: 1rem;
     z-index: 1002;
 }
+
 /* Sections */
 
 .section-1 {
@@ -141,9 +143,34 @@ p {
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
+    flex-direction: row;
     align-items: center;
-    /* justify-content: center; */
-    height: 70vh;
+    justify-content: center;
+    height: 100vh;
+}
+
+.iframe-container {
+    max-width: 100%;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+}
+
+.iframe-container iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.section-11 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    background-color: var(--var-color-dark-shades);
+    padding: 5rem;
 }
 
 .section-2 {
@@ -190,7 +217,6 @@ p {
     align-items: center;
     justify-content: center;
     height: 70vh
-    
 }
 
 .section-9 {
@@ -206,6 +232,8 @@ p {
     justify-content: center;
     height: auto;
 }
+
+
 
 /* Header and navbar */
 header {
@@ -231,7 +259,7 @@ nav {
     justify-content: space-between;
 }
 
-nav > a {
+nav>a {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -260,7 +288,7 @@ nav > a {
     font-size: 1rem;
 }
 
-.nav-link a { 
+.nav-link a {
     text-decoration: none;
     font-family: var(--var-font-primary);
     color: var(--var-color-light-shades);
@@ -268,7 +296,7 @@ nav > a {
 
 .nav-item.active {
     font-weight: bold;
-  }
+}
 
 .download-btn a .fa-download {
     font-size: 1rem;
@@ -295,7 +323,8 @@ nav > a {
 
 .sub-navbar {
     position: absolute;
-    top: 48px; /* Change this value to the height of your main navbar */
+    top: 48px;
+    /* Change this value to the height of your main navbar */
     left: 0;
     width: 100%;
     background-color: var(--var-color-light-shades);
@@ -319,12 +348,15 @@ nav > a {
 /* Home section */
 .home {
     text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .home h1 {
-    margin: 0 0 0 7rem;
-    padding: 0;
     position: relative;
+    margin: 0;
+    padding: 0;
 }
 
 .home .fa-circle {
@@ -342,8 +374,8 @@ nav > a {
     width: 165px;
 }
 
-#web, 
-#app, 
+#web,
+#app,
 #game {
     padding: 0;
     margin: 0;
@@ -377,7 +409,7 @@ nav > a {
 
 .about .blinking-cursor {
     font-size: 6rem;
-    vertical-align: center; 
+    vertical-align: center;
     animation: blink 1s infinite;
     font-weight: 300;
     display: inline;
@@ -386,10 +418,14 @@ nav > a {
 }
 
 @keyframes blink {
-    0%, 49% {
+
+    0%,
+    49% {
         opacity: 1;
     }
-    50%, 100% {
+
+    50%,
+    100% {
         opacity: 0;
     }
 }
@@ -401,7 +437,7 @@ nav > a {
     height: 100%;
     display: flex;
     justify-content: center;
-    
+
 }
 
 video {
@@ -413,7 +449,7 @@ video {
 }
 
 /* Describe section */
-.describe-myself h2{
+.describe-myself h2 {
     margin: 0 0 3rem 0;
     padding: 0;
     text-align: center;
@@ -430,7 +466,7 @@ video {
     padding: 0;
     margin-left: -18px;
     display: inline;
-    
+
 }
 
 #creationText {
@@ -441,7 +477,7 @@ video {
 
 .describe-myself .blinking-cursor {
     font-size: 3.2rem;
-    vertical-align: center; 
+    vertical-align: center;
     justify-content: left;
     animation: blink 1s infinite;
     font-weight: 300;
@@ -489,7 +525,7 @@ video {
     justify-content: center;
 }
 
-.skill-container .images > * {
+.skill-container .images>* {
     margin: 1rem;
     width: 5rem;
 }
@@ -547,7 +583,8 @@ video {
 .project img {
     width: 100%;
     border-radius: 0.5rem;
-    margin-bottom: 1rem;;
+    margin-bottom: 1rem;
+    ;
 }
 
 .project h4 {
@@ -584,7 +621,7 @@ video {
     border-radius: 0.5rem;
     font-size: 1rem;
     font-family: var(--var-font-headers);
-    text-decoration: none; 
+    text-decoration: none;
     color: var(--var-color-light-shades);
     background-color: var(--var-color-dark-shades);
     cursor: pointer;
@@ -624,21 +661,21 @@ form {
     max-width: 60rem;
     margin: 0 auto 2rem auto;
 }
-  
-  /* Style the form fields */
+
+/* Style the form fields */
 .form-group {
     margin-bottom: 1.5rem;
 }
-  
+
 label {
     margin-bottom: 0.5rem;
     font-size: 14px;
     padding: 0.5rem;
 }
-  
-  input[type="text"],
-  input[type="email"],
-  textarea {
+
+input[type="text"],
+input[type="email"],
+textarea {
     padding: 0.5rem;
     font-size: 1rem;
     border-radius: 0.5rem;
@@ -649,14 +686,14 @@ label {
     border: 1px solid var(--var-color-light-accent);
     font-family: var(--var-font-primary);
     outline: none;
-  }
-  
-  textarea {
+}
+
+textarea {
     height: 150px;
-  }
-  
-  /* Style the form button */
-  button[type="submit"] {
+}
+
+/* Style the form button */
+button[type="submit"] {
     background-color: var(--var-color-main-brand);
     color: var(--var-color-light-shades);
     padding: 0.5rem 1rem;
@@ -666,22 +703,22 @@ label {
     font-size: 1rem;
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
-    
-  }
-  
-  button[type="submit"]:hover {
-    transform: translateY(-0.25rem);
-  }
 
-  /* Footer section */
-  /* Style the footer container */
+}
+
+button[type="submit"]:hover {
+    transform: translateY(-0.25rem);
+}
+
+/* Footer section */
+/* Style the footer container */
 footer {
     background-color: var(--var-color-dark-shades);
     color: var(--var-color-light-shades);
     font-size: 1rem;
     align-items: center;
     width: 100%;
-  }
+}
 
 .row {
     display: flex;
@@ -691,16 +728,16 @@ footer {
 }
 
 
-  
-  /* Style the quick links column */
-  ul.list-unstyled {
+
+/* Style the quick links column */
+ul.list-unstyled {
     margin: 0;
     padding: 0;
     font-family: var(--var-font-primary);
     column-count: 2;
-  }
-  
-  ul.list-unstyled li {
+}
+
+ul.list-unstyled li {
     list-style: none;
     margin: 0;
     padding-right: 2rem;
@@ -723,40 +760,40 @@ ul.list-unstyled li a {
     text-decoration: none;
     transition: color 0.3s ease;
 }
-  
+
 ul.list-unstyled li a:hover {
     color: var(--var-color-light-accent);
 }
-  
-  /* Style the social media column */
+
+/* Style the social media column */
 ul.social-media-icons {
     margin: 0;
     padding: 0;
 }
-  
+
 ul.social-media-icons li {
     display: inline-block;
     margin-right: 2rem;
 }
-  
+
 ul.social-media-icons li:last-child {
     margin-right: 0;
 }
-  
+
 ul.social-media-icons li a {
     color: var(--var-color-light-shades);
     transition: color 0.3s ease;
 }
-  
+
 ul.social-media-icons li a:hover {
     color: var(--var-color-light-accent);
 }
 
-  /* Style the social media icons */
+/* Style the social media icons */
 i.fab {
     font-size: 2rem;
 }
-  
+
 i.fa-brands {
     font-size: 2rem;
 }
@@ -776,54 +813,54 @@ i.fa-brands {
     font-weight: 200;
 }
 
-  /* 
+/* 
   ##Device = Desktops
   ##Screen = 1281px to higher resolution desktops
 */
 
 @media (min-width: 1281px) {
-  
+
     /* CSS */
-    
+
 }
-  
-  /* 
+
+/* 
     ##Device = Laptops, Desktops
     ##Screen = B/w 1025px to 1280px
   */
-  
+
 @media (min-width: 1025px) and (max-width: 1280px) {
-    
+
     /* CSS */
-    
+
 }
-  
-  /* 
+
+/* 
     ##Device = Tablets, Ipads (portrait)
     ##Screen = B/w 768px to 1024px
   */
-  
+
 @media (min-width: 768px) and (max-width: 1024px) {
     h1 {
         font-size: 5rem;
         line-height: 0.8
     }
-    
+
     h2 {
         font-size: 5rem;
         line-height: 0.6;
     }
-    
-    
+
+
     h3 {
         font-size: 2.5rem;
         line-height: 1;
     }
-    
+
     h4 {
         font-size: 1.2rem;
     }
-      
+
     p {
         font-size: 1rem;
         padding: 0.5rem 5rem;
@@ -856,45 +893,45 @@ i.fa-brands {
     .section-1 {
         height: 70vh;
     }
-    
+
     .section-2 {
         height: 70vh;
     }
-    
+
     .section-3 {
         height: 70vh;
     }
-    
+
     .section-4 {
         height: auto;
         margin: 3rem 0;
     }
-    
+
     .section-5 {
         height: 70vh;
     }
-    
+
     .section-6 {
         height: auto;
         margin: 3rem 0;
     }
-    
+
     .section-7 {
         height: auto;
         margin: 3rem 0;
     }
-    
+
     .section-8 {
         height: auto;
         margin: 3rem 0;
-        
+
     }
-    
+
     .section-9 {
         height: auto;
         margin: 3rem 0;
     }
-    
+
     .section-10 {
         height: 100vh;
     }
@@ -908,7 +945,7 @@ i.fa-brands {
     nav {
         justify-content: space-between;
         z-index: 1000;
-        
+
     }
 
     .logo {
@@ -922,7 +959,7 @@ i.fa-brands {
         margin-top: 2rem;
     }
 
-    .nav-link ul > * {
+    .nav-link ul>* {
         font-size: 1.8rem;
     }
 
@@ -936,7 +973,7 @@ i.fa-brands {
         background-color: var(--var-color-dark-shades);
         z-index: 999;
     }
-    
+
     .roll-down {
         animation: roll-down 0.5s forwards;
     }
@@ -949,17 +986,19 @@ i.fa-brands {
         0% {
             transform: translateY(-100%);
         }
+
         100% {
             transform: translateY(0%);
         }
     }
-    
+
     @keyframes roll-up {
         0% {
-        transform: translateY(0%);
+            transform: translateY(0%);
         }
+
         100% {
-        transform: translateY(-100%);
+            transform: translateY(-100%);
         }
     }
 
@@ -970,7 +1009,7 @@ i.fa-brands {
     #menuBtn {
         display: flex;
     }
-    
+
     #exitBtn {
         display: none;
     }
@@ -987,15 +1026,15 @@ i.fa-brands {
 
     .home .fa-circle {
         font-size: 1rem;
-        
+
     }
 
     .span-container {
         width: 165px;
     }
 
-    #web, 
-    #app, 
+    #web,
+    #app,
     #game {
         right: 0;
         font-size: 5rem;
@@ -1019,9 +1058,9 @@ i.fa-brands {
         margin-left: -40px;
     }
 
-    .describe-myself h2{
+    .describe-myself h2 {
         margin: 3rem 0 3rem 0;
-        
+
     }
 
     .creation-container {
@@ -1064,7 +1103,7 @@ i.fa-brands {
         padding: 0 6rem;
     }
 
-    .skill-container .images > * {
+    .skill-container .images>* {
         margin: 1rem;
         width: 5rem;
     }
@@ -1086,7 +1125,7 @@ i.fa-brands {
         margin: 0 0.3rem 0rem 0.3rem;
         font-size: 1rem;
     }
-    
+
     .projects-container {
         justify-content: space-between;
     }
@@ -1095,7 +1134,7 @@ i.fa-brands {
         width: 29%;
         margin-bottom: 3rem;
     }
-  
+
     .project h3 {
         font-size: 1rem;
     }
@@ -1104,7 +1143,7 @@ i.fa-brands {
         justify-content: center;
         padding: 1rem 1rem 0 1rem;
     }
-    
+
     .project .technology img {
         width: 2.5rem;
         margin: 0.5rem;
@@ -1116,7 +1155,7 @@ i.fa-brands {
     }
 
     .contact h3 {
-        text-align:center;
+        text-align: center;
         margin-bottom: 2rem;
         margin-top: 2rem;
     }
@@ -1165,39 +1204,39 @@ i.fa-brands {
         transition: transform 0.2s ease-in-out;
         margin-left: 0.5rem;
     }
-      
+
     button[type="submit"]:hover {
         transform: translateY(-0.25rem);
     }
 }
-    
-  /* 
+
+/* 
     ##Device = Tablets, Ipads (landscape)
     ##Screen = B/w 768px to 1024px
   */
-  
+
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
     h1 {
         font-size: 2.6rem;
         line-height: 0.8
     }
-    
+
     h2 {
         font-size: 2.6rem;
         line-height: .6;
     }
-    
-    
+
+
     h3 {
         font-size: 1.8rem;
         line-height: 1.5;
     }
-    
+
     h4 {
         font-size: 1.2rem;
     }
-    
-    
+
+
     p {
         font-size: 1rem;
         padding: 0.5rem 5rem;
@@ -1231,44 +1270,44 @@ i.fa-brands {
     .section-1 {
         height: 100vh;
     }
-    
+
     .section-2 {
         height: 100vh;
     }
-    
+
     .section-3 {
         height: 100vh;
     }
-    
+
     .section-4 {
         height: auto;
         margin: 3rem 0;
     }
-    
+
     .section-5 {
         height: 100vh;
     }
-    
+
     .section-6 {
         height: auto;
         margin: 3rem 0;
     }
-    
+
     .section-7 {
         height: auto;
         margin: 3rem 0;
     }
-    
+
     .section-8 {
         height: auto;
         margin: 3rem 0;
-        
+
     }
-    
+
     .section-9 {
         height: auto;
     }
-    
+
     .section-10 {
         height: auto;
         margin: 3rem 0;
@@ -1283,7 +1322,7 @@ i.fa-brands {
     nav {
         justify-content: space-between;
         z-index: 1000;
-        
+
     }
 
     .logo {
@@ -1297,7 +1336,7 @@ i.fa-brands {
         margin-top: 2rem;
     }
 
-    .nav-link ul > * {
+    .nav-link ul>* {
         font-size: 1.8rem;
     }
 
@@ -1311,7 +1350,7 @@ i.fa-brands {
         background-color: var(--var-color-dark-shades);
         z-index: 999;
     }
-    
+
     .roll-down {
         animation: roll-down 0.5s forwards;
     }
@@ -1324,17 +1363,19 @@ i.fa-brands {
         0% {
             transform: translateY(-100%);
         }
+
         100% {
             transform: translateY(0%);
         }
     }
-    
+
     @keyframes roll-up {
         0% {
-        transform: translateY(0%);
+            transform: translateY(0%);
         }
+
         100% {
-        transform: translateY(-100%);
+            transform: translateY(-100%);
         }
     }
 
@@ -1345,7 +1386,7 @@ i.fa-brands {
     #menuBtn {
         display: flex;
     }
-    
+
     #exitBtn {
         display: none;
     }
@@ -1369,8 +1410,8 @@ i.fa-brands {
         width: 85px;
     }
 
-    #web, 
-    #app, 
+    #web,
+    #app,
     #game {
         right: 0;
         font-size: 2.6rem;
@@ -1399,10 +1440,10 @@ i.fa-brands {
         border-radius: 0;
     }
 
-    .describe-myself h2{
+    .describe-myself h2 {
         margin: 0 0 1rem 0;
         line-height: 0.9;
-        
+
     }
 
     .creation-container {
@@ -1444,7 +1485,7 @@ i.fa-brands {
         padding: 1rem 9rem;
     }
 
-    .skill-container .images > * {
+    .skill-container .images>* {
         margin: 0.3rem;
         width: 3rem;
     }
@@ -1466,7 +1507,7 @@ i.fa-brands {
         margin: 0 0.3rem 0rem 0.3rem;
         font-size: 1rem;
     }
-    
+
     .projects-container {
         justify-content: center;
     }
@@ -1475,7 +1516,7 @@ i.fa-brands {
         width: 40%;
         margin-bottom: 1rem;
     }
-  
+
     .project h3 {
         font-size: 1rem;
     }
@@ -1485,7 +1526,7 @@ i.fa-brands {
         padding: 1rem 1rem 0 1rem;
         margin-bottom: 1rem;
     }
-    
+
     .project .technology img {
         margin: 0.3rem;
         width: 3rem;
@@ -1497,7 +1538,7 @@ i.fa-brands {
     }
 
     .contact h3 {
-        text-align:center;
+        text-align: center;
         margin-bottom: 2rem;
         margin-top: 2rem;
     }
@@ -1546,39 +1587,39 @@ i.fa-brands {
         transition: transform 0.2s ease-in-out;
         margin-left: 0.5rem;
     }
-      
+
     button[type="submit"]:hover {
         transform: translateY(-0.25rem);
     }
-  }
-  
-  /* 
+}
+
+/* 
     ##Device = Low Resolution Tablets, Mobiles (Landscape)
     ##Screen = B/w 481px to 767px
   */
-  
+
 @media (min-width: 481px) and (max-width: 767px) {
     h1 {
         font-size: 2.6rem;
         line-height: 0.8
     }
-    
+
     h2 {
         font-size: 2.6rem;
         line-height: .6;
     }
-    
-    
+
+
     h3 {
         font-size: 1.8rem;
         line-height: 1.5;
     }
-    
+
     h4 {
         font-size: 1.2rem;
     }
-    
-    
+
+
     p {
         font-size: 1rem;
         padding: 0.5rem 5rem;
@@ -1611,44 +1652,44 @@ i.fa-brands {
     .section-1 {
         height: 100vh;
     }
-    
+
     .section-2 {
         height: 100vh;
     }
-    
+
     .section-3 {
         height: 100vh;
     }
-    
+
     .section-4 {
         height: auto;
         margin: 3rem 0;
     }
-    
+
     .section-5 {
         height: 100vh;
     }
-    
+
     .section-6 {
         height: auto;
         margin: 3rem 0;
     }
-    
+
     .section-7 {
         height: auto;
         margin: 3rem 0;
     }
-    
+
     .section-8 {
         height: auto;
         margin: 3rem 0;
-        
+
     }
-    
+
     .section-9 {
         height: auto;
     }
-    
+
     .section-10 {
         height: auto;
         margin: 3rem 0;
@@ -1663,7 +1704,7 @@ i.fa-brands {
     nav {
         justify-content: space-between;
         z-index: 1000;
-        
+
     }
 
     .logo {
@@ -1677,7 +1718,7 @@ i.fa-brands {
         margin-top: 2rem;
     }
 
-    .nav-link ul > * {
+    .nav-link ul>* {
         font-size: 1.8rem;
     }
 
@@ -1691,7 +1732,7 @@ i.fa-brands {
         background-color: var(--var-color-dark-shades);
         z-index: 999;
     }
-    
+
     .roll-down {
         animation: roll-down 0.5s forwards;
     }
@@ -1704,17 +1745,19 @@ i.fa-brands {
         0% {
             transform: translateY(-100%);
         }
+
         100% {
             transform: translateY(0%);
         }
     }
-    
+
     @keyframes roll-up {
         0% {
-        transform: translateY(0%);
+            transform: translateY(0%);
         }
+
         100% {
-        transform: translateY(-100%);
+            transform: translateY(-100%);
         }
     }
 
@@ -1726,7 +1769,7 @@ i.fa-brands {
         display: flex;
 
     }
-    
+
     #exitBtn {
         display: none;
     }
@@ -1750,8 +1793,8 @@ i.fa-brands {
         width: 85px;
     }
 
-    #web, 
-    #app, 
+    #web,
+    #app,
     #game {
         right: 0;
         font-size: 2.6rem;
@@ -1779,10 +1822,10 @@ i.fa-brands {
         border-radius: 0;
     }
 
-    .describe-myself h2{
+    .describe-myself h2 {
         margin: 0 0 1rem 0;
         line-height: 0.9;
-        
+
     }
 
     .creation-container {
@@ -1825,7 +1868,7 @@ i.fa-brands {
 
     }
 
-    .skill-container .images > * {
+    .skill-container .images>* {
         margin: 0.3rem;
         width: 3rem;
     }
@@ -1847,7 +1890,7 @@ i.fa-brands {
         margin: 0 0.3rem 0rem 0.3rem;
         font-size: 1rem;
     }
-    
+
     .projects-container {
         justify-content: center;
     }
@@ -1856,7 +1899,7 @@ i.fa-brands {
         width: 40%;
         margin-bottom: 1rem;
     }
-  
+
     .project h3 {
         font-size: 1rem;
     }
@@ -1866,7 +1909,7 @@ i.fa-brands {
         padding: 1rem 1rem 0 1rem;
         margin-bottom: 1rem;
     }
-    
+
     .project .technology img {
         margin: 0.3rem;
         width: 3rem;
@@ -1878,7 +1921,7 @@ i.fa-brands {
     }
 
     .contact h3 {
-        text-align:center;
+        text-align: center;
         margin-bottom: 2rem;
         margin-top: 2rem;
     }
@@ -1928,7 +1971,7 @@ i.fa-brands {
         transition: transform 0.2s ease-in-out;
         margin-left: 0.5rem;
     }
-      
+
     button[type="submit"]:hover {
         transform: translateY(-0.25rem);
     }
@@ -1961,28 +2004,28 @@ i.fa-brands {
 ##Device = Most of the Smartphones Mobiles (Portrait)
 ##Screen = B/w 320px to 479px
 */
-    
+
 @media (min-width: 320px) and (max-width: 480px) {
     h1 {
         font-size: 2.6rem;
         line-height: 0.8
     }
-    
+
     h2 {
         font-size: 2.6rem;
         line-height: .6;
     }
-    
-    
+
+
     h3 {
         font-size: 1.8rem;
         line-height: 1.5;
     }
-    
+
     h4 {
         font-size: 1.2rem;
     }
-      
+
     p {
         font-size: 1rem;
         padding: 0.5rem 1rem;
@@ -2013,46 +2056,50 @@ i.fa-brands {
     }
 
     .section-1 {
-        height: 70vh;
+        height: 70vh
     }
-    
+
+    .section-11 {
+        padding: 0rem;
+    }
+
     .section-2 {
         height: 70vh;
     }
-    
+
     .section-3 {
         height: 70vh;
     }
-    
+
     .section-4 {
         height: auto;
         margin: 3rem 0;
     }
-    
+
     .section-5 {
         height: 70vh;
     }
-    
+
     .section-6 {
         height: auto;
         margin: 3rem 0;
     }
-    
+
     .section-7 {
         height: auto;
         margin: 3rem 0;
     }
-    
+
     .section-8 {
         height: auto;
         margin: 3rem 0;
-        
+
     }
-    
+
     .section-9 {
         height: auto;
     }
-    
+
     .section-10 {
         height: 100vh;
     }
@@ -2066,7 +2113,7 @@ i.fa-brands {
     nav {
         justify-content: space-between;
         z-index: 1000;
-        
+
     }
 
     .logo {
@@ -2080,7 +2127,7 @@ i.fa-brands {
         margin-top: 2rem;
     }
 
-    .nav-link ul > * {
+    .nav-link ul>* {
         font-size: 1.8rem;
     }
 
@@ -2094,7 +2141,7 @@ i.fa-brands {
         background-color: var(--var-color-dark-shades);
         z-index: 999;
     }
-    
+
     .roll-down {
         animation: roll-down 0.5s forwards;
     }
@@ -2107,17 +2154,19 @@ i.fa-brands {
         0% {
             transform: translateY(-100%);
         }
+
         100% {
             transform: translateY(0%);
         }
     }
-    
+
     @keyframes roll-up {
         0% {
-        transform: translateY(0%);
+            transform: translateY(0%);
         }
+
         100% {
-        transform: translateY(-100%);
+            transform: translateY(-100%);
         }
     }
 
@@ -2128,7 +2177,7 @@ i.fa-brands {
     #menuBtn {
         display: flex;
     }
-    
+
     #exitBtn {
         display: none;
     }
@@ -2137,10 +2186,15 @@ i.fa-brands {
         margin: 0;
     }
 
+    .home {
+        justify-content: left;
+    }
+
     .home h1 {
         margin: 0 0 0 1rem;
         line-height: 3rem;
         padding: 0 0 3rem 0;
+        justify-content: none;
     }
 
     .home .fa-circle {
@@ -2152,8 +2206,8 @@ i.fa-brands {
         width: 85px;
     }
 
-    #web, 
-    #app, 
+    #web,
+    #app,
     #game {
         right: 0;
         font-size: 2.6rem;
@@ -2177,10 +2231,10 @@ i.fa-brands {
         margin-left: -19px;
     }
 
-    .describe-myself h2{
+    .describe-myself h2 {
         margin: 0 0 1rem 0;
         line-height: 0.9;
-        
+
     }
 
     .creation-container {
@@ -2222,7 +2276,7 @@ i.fa-brands {
         padding: 0 0.5rem;
     }
 
-    .skill-container .images > * {
+    .skill-container .images>* {
         margin: 0.5rem;
         width: 2.5rem;
     }
@@ -2244,7 +2298,7 @@ i.fa-brands {
         margin: 0 0.3rem 0rem 0.3rem;
         font-size: 1rem;
     }
-    
+
     .projects-container {
         justify-content: center;
     }
@@ -2253,7 +2307,7 @@ i.fa-brands {
         width: 100%;
         margin-bottom: 1rem;
     }
-  
+
     .project h3 {
         font-size: 1rem;
     }
@@ -2262,7 +2316,7 @@ i.fa-brands {
         justify-content: center;
         padding: 1rem 1rem 0 1rem;
     }
-    
+
     .project .technology img {
         width: 2.5rem;
         margin: 0.5rem;
@@ -2273,7 +2327,7 @@ i.fa-brands {
     }
 
     .contact h3 {
-        text-align:center;
+        text-align: center;
         margin-bottom: 2rem;
         margin-top: 2rem;
     }
@@ -2323,7 +2377,7 @@ i.fa-brands {
         transition: transform 0.2s ease-in-out;
         margin-left: 0.5rem;
     }
-      
+
     button[type="submit"]:hover {
         transform: translateY(-0.25rem);
     }
@@ -2355,11 +2409,11 @@ i.fa-brands {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center; 
+        align-items: center;
         width: 100%;
     }
 
-    ul.list-unstyled li{
+    ul.list-unstyled li {
         text-align: center;
         padding: 0
     }
@@ -2367,11 +2421,11 @@ i.fa-brands {
     ul.social-media-icons {
         margin: 0 auto;
         padding: 1rem;
-        display:flex;
+        display: flex;
         flex-wrap: wrap;
         justify-content: cetner;
         align-items: center;
-      }
+    }
 }
 
 /*
@@ -2396,8 +2450,8 @@ i.fa-brands {
         width: 100px;
     }
 
-    #web, 
-    #app, 
+    #web,
+    #app,
     #game {
         font-size: 3rem;
     }
@@ -2437,8 +2491,8 @@ i.fa-brands {
         width: 110px;
     }
 
-    #web, 
-    #app, 
+    #web,
+    #app,
     #game {
         font-size: 3.3rem;
     }
