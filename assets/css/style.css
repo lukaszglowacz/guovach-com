@@ -146,6 +146,7 @@ p {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    position: relative;
     height: 100vh;
 }
 
@@ -392,6 +393,30 @@ nav>a {
     margin: 0;
     right: 0;
     font-size: 5rem;
+}
+
+.contact-button {
+    display: flex;
+    justify-content: center;
+}
+
+.contact-button button {
+    background-color: var(--var-color-main-brand);
+    color: var(--var-color-light-shades);
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-family: var(--var-font-headers);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    position: absolute;
+    left: 50%;
+    top: 75%;
+}
+
+.contact-button button:hover {
+    transform: translateY(-0.25rem);
 }
 
 /* Home-2 section */
@@ -2236,6 +2261,11 @@ i.fa-brands {
     #game {
         right: 0;
         font-size: 2.6rem;
+    }
+
+    .contact-button button {
+        left: 25%;
+        top: 80%;
     }
 
     .about h2 {
