@@ -1,1 +1,1 @@
-### Lucas Guovach | Software Developer
+### Lukasz Glowacz | Full-Stack Coder
